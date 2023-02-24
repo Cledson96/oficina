@@ -57,6 +57,114 @@ export default function Home() {
           <h1 className="price_product"> R$ 35,00</h1>
           <button className="purchase">Adicionar ao carrinho</button>
         </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>{" "}
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
       </ul>
     </div>
   );
