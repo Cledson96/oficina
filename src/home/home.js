@@ -1,5 +1,4 @@
 import "./home.css";
-import logo from "./../img/logo.png";
 
 import { useEffect, useState } from "react";
 
@@ -22,7 +21,7 @@ export default function Home() {
     let sendOffers = date.map((ref, index) => {
       return (
         <>
-          <div className="box">
+          <div key={index} className="box">
             <img alt="offer" src={ref.imagem}></img>
             <h3>{ref.descricao}</h3>
           </div>
@@ -48,6 +47,17 @@ export default function Home() {
         </div>
         <div className="offers">{offers ? offers[index] : "Carregando"}</div>
       </div>
+      <ul className="list_product">
+        <li className="product">
+          <img
+            alt="product"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9U-n9yE1Ne8kMtZBl1FfzgOC2Cb4HrMtCA&usqp=CAU"
+          />
+          <h1 className="description_product"> Óleo Mineral Petroras 1L</h1>
+          <h1 className="price_product"> R$ 35,00</h1>
+          <button className="purchase">Adicionar ao carrinho</button>
+        </li>
+      </ul>
     </div>
   );
 }
