@@ -1,5 +1,5 @@
 import "./home.css";
-import oleo from "./../img/oleo.jpg";
+import logo from "./../img/logo.png";
 
 import { useEffect, useState } from "react";
 
@@ -8,36 +8,23 @@ export default function Home() {
   const [index, setindex] = useState(0);
   const date = [
     {
-      produto: "óleo mineral Gulf 1L",
-      descricao: "Aproveite esta oferta!!",
+      descricao: "Troca de óleo por 100,00 R$!!",
       imagem:
-        "https://cdn.awsli.com.br/1000x1000/583/583938/produto/140417929/2e3e5c2f8a.jpg",
-      preçoAtual: "20,00",
-      preçoAntigo: "25,00",
+        "https://www.minutoseguros.com.br/blog/wp-content/uploads/2016/07/troca-de-oleo-2.jpg",
     },
     {
-      produto: "Óleo mineral Mutul 1L",
-      descricao: "Super desconto!!",
+      descricao: "Revisão completo por 250,00 R$!!",
       imagem:
-        "https://cdn.awsli.com.br/1000x1000/583/583938/produto/140417929/2e3e5c2f8a.jpg",
-      preçoAtual: "23,00",
-      preçoAntigo: "27,00",
+        "https://s34918.pcdn.co/wp-content/uploads/2022/08/unnamed-31.jpg",
     },
   ];
   useEffect(() => {
     let sendOffers = date.map((ref, index) => {
       return (
         <>
-          <img alt="offer" src={ref.imagem}></img>
           <div className="box">
+            <img alt="offer" src={ref.imagem}></img>
             <h3>{ref.descricao}</h3>
-            <br></br>
-            <span>
-              <h3>{ref.produto}</h3>
-              <h3>
-                {ref.preçoAntigo} por {ref.preçoAtual}
-              </h3>
-            </span>
           </div>
         </>
       );
@@ -45,14 +32,21 @@ export default function Home() {
     setoffers(sendOffers);
   }, []);
 
-  setInterval(() => {}, 3000);
+  setTimeout(() => {
+    if (index === date.length - 1) {
+      setindex(0);
+    } else {
+      setindex(index + 1);
+    }
+  }, 5000);
+
   return (
     <div className="section">
       <div className="promotion">
         <div className="promotion_div">
           <h1 className="promotion_text">Super Promoção!!!</h1>
         </div>
-        <div className="offers">{offers ? offers[1] : "Carregando"}</div>
+        <div className="offers">{offers ? offers[index] : "Carregando"}</div>
       </div>
     </div>
   );
