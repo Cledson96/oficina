@@ -150,3 +150,21 @@ background: linear-gradient(100deg, rgba(0,0,0,1) 0%, rgba(47,38,39,1) 25%, rgba
     font-weight: 800;
     text-align: center;
 }
+.addres{
+    display: flex;
+    justify-content: space-between;
+}
+.street{
+ width: 80%; 
+}
+.number{
+width: 15%;
+}
+.signup_on{
+    width: 80vw;
+    height: 500px;
+ align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

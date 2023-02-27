@@ -60,7 +60,7 @@ export default function SignUp() {
             <div className="send">Entrar</div>
           </div>
         ) : (
-          <div className="signup_info">
+          <div className="signup_on">
             <div className="header_box">
               <h1 onClick={() => setscreen("signIn")} className="not_selected">
                 {" "}
@@ -73,6 +73,11 @@ export default function SignUp() {
             </div>
             <div className="form">
               <input placeholder="Nome completo"></input>
+              <div className="addres">
+                <input className="street" placeholder="Logradouro"></input>
+                <input className="number" placeholder="Numero"></input>
+              </div>
+
               <div className="fixed">
                 <input
                   className="password"
@@ -94,7 +99,7 @@ export default function SignUp() {
                 )}
               </div>
             </div>
-            <div className="send">Entrar</div>
+            <div className="send">Cadastrar</div>
           </div>
         )}
         {screen === "signIn" ? (
