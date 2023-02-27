@@ -1,7 +1,9 @@
 import "./headers.css";
 import logo from "./../img/logo.png";
+import { useEffect, useState } from "react";
 
 export default function Headers() {
+  const [logged, setlogged] = useState(false);
   return (
     <div className="headers">
       <img alt="logo" src={logo} />
@@ -15,6 +17,9 @@ export default function Headers() {
         <h2>SERVIÇOS</h2>
         <h2>PRODUTOS</h2>
         <h2>CONTATO</h2>
+      </div>
+      <div className="logged">
+        {logged === false ? <button> Entrar </button> : <></>}
       </div>
     </div>
   );

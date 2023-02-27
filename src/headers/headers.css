@@ -28,6 +28,7 @@
     margin-left: 15px;    
     font-weight: 800;
     box-shadow: 3px 3px 3px  rgba(255, 255, 255, 0.082);
+    transition: background-color 0.3s, color 0.3s;
 }
 .menu h2:hover{
     color: rgb(29, 190, 29);
@@ -38,3 +39,28 @@
     display: flex;
 
 }
+.logged{
+   margin-left: 150px;
+    width: 250px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+ }
+
+ .logged button{
+    width: 150px;
+    height: 60%;
+     background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+ }
+
+ .logged button:hover {
+    background-color: #2E8B57;
+    color: #fffacd;
+    font-family: Arial, sans-serif;
+  }

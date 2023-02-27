@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
    
+   
 }
 .promotion_div{
     border-radius: 10px 0px 0px 10px;
@@ -135,6 +136,7 @@ span{
     background-color: rgb(28, 146, 28);
     color: white;
     font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
 }
 .product button:hover{
     background-color: rgb(18, 204, 18);
