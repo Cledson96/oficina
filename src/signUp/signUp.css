@@ -1,5 +1,5 @@
 .signup{
-    background-image: url("./../img/signup.avif");
+    
     
     width: 100vw;
     height: calc(100vh - 100px);
@@ -38,6 +38,14 @@
     padding: 2px;
     padding-bottom: 5px;
 }
+.selected:hover{
+    cursor: pointer;
+    color: green;
+}
+.not_selected:hover{
+    cursor: pointer;
+    color: green;
+}
 .not_selected{
     margin-right: 30px;
     color: white;
@@ -50,7 +58,8 @@
     width: 100vw;
     height: calc(100vh - 100px);
     display: flex;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(83, 60, 63, 0.815) 30%, rgba(66, 25, 28, 0.452) 50%, rgba(99, 21, 22, 0.048) 76%, rgba(168, 5, 5, 0.096) 100%);
+    background: rgb(0,0,0);
+background: linear-gradient(100deg, rgba(0,0,0,1) 0%, rgba(47,38,39,1) 25%, rgba(64,25,28,1) 50%, rgba(85,17,18,1) 75%, rgba(117,8,8,1) 100%);
     justify-content: center;
     align-items: center;
 }
@@ -89,7 +98,7 @@
 
 }
 .send{
-    background-color: rgba(61, 209, 24, 0.877);
+    background-color: rgba(51, 155, 24, 0.877);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +116,7 @@
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
     font-size: 35px;
-    color: black;
+    color: white;
 }
 .fixed img{
     
@@ -127,7 +136,17 @@
 .signup_logo{
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-   background-color: rgba(211, 25, 25, 0.014);
-   border-radius: 50%;
+    background: none;
+    border-radius: 50%;
+}
+.signup_logo h1{
+    
+    margin-top: 15px;
+    font-size: 30px;
+    text-align: center;
+    color:white;
+    font-weight: 800;
+    text-align: center;
 }

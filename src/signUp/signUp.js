@@ -93,16 +93,20 @@ export default function SignUp() {
                   ></img>
                 )}
               </div>
-
-              <h1 className="forgot_password"></h1>
             </div>
             <div className="send">Entrar</div>
           </div>
         )}
-
-        <div className="signup_logo">
-          <img alt="src" src={logo}></img>
-        </div>
+        {screen === "signIn" ? (
+          <div className="signup_logo">
+            <img alt="src" src={logo}></img>
+            <h1>
+              Auto peças & <div className="break">serviços Bodnar</div>
+            </h1>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
