@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center"> Oficina Bodnar - Project Full stack </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Descrição
+### Português
 
-### `npm start`
+Projeto em andamento em que será feita uma aplicação full-stack com informações sobre a autopeças Bodnar, como localização, a história da oficina, preços de serviços e o cliente poderá comprar as peças pela própria aplicação, usando tanto cartão de crédito como PIX. Terá acesso à API dos Correios para cadastrar os endereços e ter os valores do frete. O cliente poderá adicionar e remover produtos no carrinho até a realização da compra.
+O back-end so projeto se encontra neste link: `https://github.com/Cledson96/oficina-back.git`
+As tecnologias e bibliotecas utilizadas até o momento no front-end são:
+-React
+-Axios
+-React-router-dom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Inglês
+"Ongoing project in which a full-stack application will be developed with information about the auto parts store Bodnar, such as location, workshop history, service prices, and the customer will be able to buy parts through the application, using both credit card and PIX. It will have access to Correios API to register addresses and get shipping rates. The customer will be able to add and remove products from the cart until the purchase is completed.
+The technologies and libraries used so far on the front-end are:
+-React
+-Axios
+-React-router-dom
 
-### `npm test`
+## Instalação e Execução
+### Português
+1. Clone este repositório: `git clone https://github.com/Cledson96/oficina.git`
+2. Entre no diretório do projeto: `cd seu-projeto`
+3. Instale as dependências: `npm install`
+4. Execute o projeto: `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Inglês
+1. Clone this repository: `git clone https://github.com/Cledson96/oficina.git`
+2. Navigate to the project directory: `cd your-project`
+3. Install dependencies: `npm install`
+4. Run the project: `npm start`
 
-### `npm run build`
+### Deploy
+`https://oficina-fs81h8ksh-cledson96.vercel.app/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como contribuir
+### Português
+Você pode contribuir para este projeto de várias formas, como:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Reportando erros ou bugs
+- Sugerindo novas funcionalidades
+- Corrigindo erros ou implementando novas funcionalidades
+- Escrevendo documentação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para contribuir, basta criar uma nova branch com suas alterações e enviar um pull request.
 
-### `npm run eject`
+### Inglês
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can contribute to this project in various ways, such as:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Reporting errors or bugs
+Suggesting new features
+Correcting errors or implementing new features
+Writing documentation
+To contribute, simply create a new branch with your changes and send a pull request.
