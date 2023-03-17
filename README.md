@@ -15,6 +15,7 @@ As tecnologias e bibliotecas utilizadas até o momento no front-end são:
 
 ### Inglês
 "Ongoing project in which a full-stack application will be developed with information about the auto parts store Bodnar, such as location, workshop history, service prices, and the customer will be able to buy parts through the application, using both credit card and PIX. It will have access to Correios API to register addresses and get shipping rates. The customer will be able to add and remove products from the cart until the purchase is completed.
+The back-end of the project can be found at this link:  `https://github.com/Cledson96/oficina-back.git`
 The technologies and libraries used so far on the front-end are:
 -React
 -Axios
