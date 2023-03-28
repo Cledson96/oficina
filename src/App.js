@@ -1,16 +1,16 @@
 import Headers from "./headers/headers";
 import Home from "./home/home";
-import SignUp from "./signUp/signUp";
+import GetIn from "./GetIn/GetIn";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
     <>
-      <Headers />
       <BrowserRouter>
+        <Headers />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sign_up" element={<SignUp />} />
+          <Route path="/get_in" element={<GetIn />} />
         </Routes>
       </BrowserRouter>
     </>
