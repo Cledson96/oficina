@@ -29,8 +29,6 @@ export default function SignIn({ setscreen, setview, view }) {
             <img onClick={() => setview(!view)} alt="eyes" src={eye_not}></img>
           )}
         </div>
-
-        <h1 className="forgot_password"></h1>
       </div>
       <div className="send">Entrar</div>
     </div>

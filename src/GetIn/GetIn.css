@@ -1,6 +1,4 @@
 .GetIn{
-    
-    
     width: 100vw;
     height: calc(100vh - 100px);
     background-size:cover;
@@ -152,16 +150,14 @@
     font-weight: 800;
     text-align: center;
 }
-.addres{
+.telephone{
     display: flex;
     justify-content: space-between;
 }
-.street{
- width: 80%; 
+.phoneOne{
+ width: 48%; 
 }
-.number{
-width: 15%;
-}
+
 .signup_on{
     width: 80vw;
     height: 500px;

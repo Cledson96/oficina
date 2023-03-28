@@ -1,56 +1,62 @@
 import "./GetIn.css";
 import eye_not from "./../img/eye_not.png";
 import eye from "./../img/eye.png";
-import { useEffect, useState } from "react";
-import { AlertPassword, AlertErrorSignUp } from "../components/modal";
+import { useState } from "react";
+import {
+  AlertPassword,
+  AlertErrorSignUp,
+  AlertErrorCPF,
+  SignUpOK,
+} from "../components/modal";
+import { postSignUp } from "../request/request";
 
 export default function SignUp({ setscreen, setview, view }) {
   const [data, setdata] = useState({});
-  const [street, setstreet] = useState();
-  const [number, setnumber] = useState();
   const [confirmPassword, setconfirmPassword] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [errorOpen, setErrorOpen] = useState(false);
+  const [errorCPF, setErrorCPF] = useState(false);
+  const [signUp_OK, setsignUp_OK] = useState(false);
+
+  function handleReset() {
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
+    );
+  }
 
   function sendBody() {
     if (data.password !== confirmPassword) {
       setIsOpen(true);
       return;
     }
-    if (
-      !data.name ||
-      !data.address ||
-      !data.cpf ||
-      !data.password ||
-      !data.email
-    ) {
+    if (!data.name || !data.phone || !data.password || !data.email) {
       setErrorOpen(true);
     }
-    if (data.cpf.length !== 11) {
-      alert("Obrigatório CPF com 11 digitos sem pontos ou traços");
+    if (data.cpf) {
+      if (data.cpf.length !== 11 || isNaN(data.cpf)) {
+        setErrorCPF(true);
+        return;
+      }
     }
+
+    const post = postSignUp(data);
+    post.then(() => {
+      setsignUp_OK(true);
+      handleReset();
+      return;
+    });
+    post.catch((error) => {
+      if (error.response.status) {
+        alert("Email ja cadastrado,favor faça login");
+        setscreen("signIn");
+        return;
+      }
+
+      alert("Tivemos um erro ao realizar seu cadastro, tente mais tarde!");
+    });
   }
 
   function handleForm({ value, name }) {
-    let address;
-    if (name === "street") {
-      setstreet(value);
-      address = value + "," + number;
-      setdata({
-        ...data,
-        address,
-      });
-      return;
-    }
-    if (name === "number") {
-      setnumber(value);
-      address = street + "," + value;
-      setdata({
-        ...data,
-        address,
-      });
-      return;
-    }
     setdata({
       ...data,
       [name]: value,
@@ -65,6 +71,16 @@ export default function SignUp({ setscreen, setview, view }) {
       )}
       {errorOpen === true ? (
         <AlertErrorSignUp setIsOpen={setErrorOpen}> </AlertErrorSignUp>
+      ) : (
+        <></>
+      )}
+      {errorCPF === true ? (
+        <AlertErrorCPF setIsOpen={setErrorCPF}> </AlertErrorCPF>
+      ) : (
+        <></>
+      )}
+      {signUp_OK === true ? (
+        <SignUpOK setIsOpen={setsignUp_OK} setscreen={setscreen}></SignUpOK>
       ) : (
         <></>
       )}
@@ -94,19 +110,19 @@ export default function SignUp({ setscreen, setview, view }) {
             handleForm({ name: e.target.name, value: e.target.value })
           }
         ></input>
-        <div className="addres">
+        <div className="telephone">
           <input
-            name="street"
-            className="street"
-            placeholder="Logradouro"
+            name="phone"
+            className="phoneOne"
+            placeholder="Telefone principal"
             onChange={(e) =>
               handleForm({ name: e.target.name, value: e.target.value })
             }
           ></input>
           <input
-            name="number"
-            className="number"
-            placeholder="Numero"
+            name="phonecontact"
+            className="phoneOne"
+            placeholder="Telefone de contato (opcional)"
             onChange={(e) =>
               handleForm({ name: e.target.name, value: e.target.value })
             }
@@ -114,7 +130,7 @@ export default function SignUp({ setscreen, setview, view }) {
         </div>
         <input
           name="cpf"
-          placeholder="CPF"
+          placeholder="CPF (opcional)"
           onChange={(e) =>
             handleForm({ name: e.target.name, value: e.target.value })
           }
