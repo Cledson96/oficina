@@ -5,14 +5,19 @@ import logo from "./../img/logo.png";
 import SignIn from "./SingIn";
 import SignUp from "./SingUp";
 
-export default function GetIn() {
+export default function GetIn({ setlogged }) {
   const [view, setview] = useState(false);
   const [screen, setscreen] = useState("signIn");
   return (
     <div className="GetIn">
       <div className="veu">
         {screen === "signIn" ? (
-          <SignIn setscreen={setscreen} setview={setview} view={view}></SignIn>
+          <SignIn
+            setscreen={setscreen}
+            setview={setview}
+            view={view}
+            setlogged={setlogged}
+          ></SignIn>
         ) : (
           <SignUp setscreen={setscreen} setview={setview} view={view}></SignUp>
         )}

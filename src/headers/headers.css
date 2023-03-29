@@ -64,3 +64,36 @@
     color: #fffacd;
     font-family: Arial, sans-serif;
   }
+  .user{
+    width: 40px;
+   max-height: 40px;
+   margin-right: 10px;
+  }
+  .nameUser{
+    color:orange;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .cars{
+    width: 50px;
+    max-height: 50px;
+    position: relative;
+  }
+  .cars img{
+    width: 50px;
+    max-height: 50px;
+  }
+  .counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: white;
+    color: rgb(22, 228, 22);
+  }
