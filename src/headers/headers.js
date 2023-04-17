@@ -87,7 +87,7 @@ export default function Headers({ setlogged, logged }) {
               <div className="site-logo-wrap">
                 <div className="site-logo">
                   <a href="index.html">
-                    <img src="img/logo.png" alt="Logo" />
+                    <img style={{ height: "80px" }} src={logo} alt="Logo" />
                   </a>
                 </div>
                 <div className="get-support clearfix">
