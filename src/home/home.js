@@ -6,6 +6,7 @@ import SlideShow from "../components/slideSHow";
 import BoxService from "../components/boxService";
 import Cotation from "../components/cotation";
 import Services from "../components/services";
+import SlideHome from "../components/slidesHome";
 
 export default function Home() {
   const [offers, setoffers] = useState();
@@ -43,6 +44,7 @@ export default function Home() {
       <BoxService></BoxService>
       <Cotation></Cotation>
       <Services></Services>
+      <SlideHome></SlideHome>
     </>
   );
 }
