@@ -30,24 +30,19 @@ export default function BoxService() {
               </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-12">
-              <div
-                class="ltn__feature-item ltn__feature-item-5 bg-overlay-theme-90 text-color-white text-center bg-image"
-                data-bs-bg="img/product/1.png"
-              >
+              <div class="ltn__feature-item ltn__feature-item-5 bg-overlay-theme-90 text-color-white text-center bg-image">
                 <div class="ltn__feature-icon">
-                  <span>
-                    <i class="icon-car"></i>
-                  </span>
+                  <i class="icon-car"></i>
                 </div>
                 <div class="ltn__feature-info">
                   <h2>
                     <a href="team.html" class="white-color-im">
-                      Expert Mechanics
+                      Mecânico especializado
                     </a>
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore.
+                    Mecânicos especializados em reparos automotivos. Soluções
+                    confiáveis e duradouras para o seu veículo.
                   </p>
                 </div>
                 <div class="btn-wrapper">
@@ -55,7 +50,7 @@ export default function BoxService() {
                     href="team.html"
                     class="btn btn-white btn-effect-3 btn-full-width"
                   >
-                    Learn More
+                    Veja mais
                   </a>
                 </div>
               </div>
@@ -63,17 +58,16 @@ export default function BoxService() {
             <div class="col-lg-4 col-sm-6 col-12">
               <div class="ltn__feature-item ltn__feature-item-5 white-bg text-center">
                 <div class="ltn__feature-icon">
-                  <span>
-                    <i class="icon-mechanic"></i>
-                  </span>
+                  <i class="icon-mechanic"></i>
                 </div>
                 <div class="ltn__feature-info">
                   <h2>
-                    <a href="service-details.html">Fast Feature Delivery</a>
+                    <a href="service-details.html">Entregas rápidas</a>
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore.
+                    Entrega rápida e eficiente de peças automotivas para o seu
+                    veículo. Agilidade e compromisso para atender suas
+                    necessidades com rapidez.
                   </p>
                 </div>
                 <div class="btn-wrapper">
@@ -81,7 +75,7 @@ export default function BoxService() {
                     href="service-details.html"
                     class="btn btn-white btn-effect-3 btn-full-width"
                   >
-                    Learn More
+                    Veja mais
                   </a>
                 </div>
               </div>
