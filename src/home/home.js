@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Cars from "../components/cars";
 import SlideShow from "../components/slideSHow";
 import BoxService from "../components/boxService";
+import Cotation from "../components/cotation";
 
 export default function Home() {
   const [offers, setoffers] = useState();
@@ -39,6 +40,7 @@ export default function Home() {
       <Cars></Cars>
       <SlideShow></SlideShow>
       <BoxService></BoxService>
+      <Cotation></Cotation>
     </>
   );
 }

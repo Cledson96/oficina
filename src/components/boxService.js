@@ -40,7 +40,7 @@ export default function BoxService() {
                       Mecânico especializado
                     </a>
                   </h2>
-                  <p>
+                  <p className="mt-2">
                     Mecânicos especializados em reparos automotivos. Soluções
                     confiáveis e duradouras para o seu veículo.
                   </p>
@@ -64,7 +64,7 @@ export default function BoxService() {
                   <h2>
                     <a href="service-details.html">Entregas rápidas</a>
                   </h2>
-                  <p>
+                  <p className="mt-2">
                     Entrega rápida e eficiente de peças automotivas para o seu
                     veículo. Agilidade e compromisso para atender suas
                     necessidades com rapidez.
