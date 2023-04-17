@@ -1,16 +1,16 @@
 export default function Cotation() {
   return (
     <>
-      <div class="ltn__about-us-area pt-115 pb-95">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 align-self-center">
-              <div class="about-us-info-wrap">
-                <div class="section-title-area ltn__section-title-2">
-                  <h6 class="section-subtitle ltn__secondary-color">
+      <div className="ltn__about-us-area pt-115 pb-95">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7 align-self-center">
+              <div className="about-us-info-wrap">
+                <div className="section-title-area ltn__section-title-2">
+                  <h6 className="section-subtitle ltn__secondary-color">
                     // A escolha inteligente para o seu carro
                   </h6>
-                  <h1 class="section-title">
+                  <h1 className="section-title">
                     Cuidando do seu carro do início ao fim<span>.</span>
                   </h1>
                   <p>
@@ -18,7 +18,7 @@ export default function Cotation() {
                     serviços automotivos.
                   </p>
                 </div>
-                <div class="about-us-info-wrap-inner about-us-info-devide">
+                <div className="about-us-info-wrap-inner about-us-info-devide">
                   <p>
                     Na Autopeças Bodnar, você encontra peças automotivas de
                     qualidade e serviços especializados em manutenção e reparos.
@@ -26,7 +26,7 @@ export default function Cotation() {
                     justos. Conte conosco para manter seu veículo em ótimas
                     condições.
                   </p>
-                  <div class="list-item-with-icon">
+                  <div className="list-item-with-icon">
                     <ul>
                       <li>
                         <a href="contact.html"> Suporte e eficiencia</a>
@@ -47,28 +47,28 @@ export default function Cotation() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-5 align-self-center">
-              <div class="get-a-quote-wrap">
+            <div className="col-lg-5 align-self-center">
+              <div className="get-a-quote-wrap">
                 <h2 className="mb-2">Peça um orçamento</h2>
-                <form action="#" class="get-a-quote-form">
-                  <div class="input-item input-item-name ltn__custom-icon">
+                <form action="#" className="get-a-quote-form">
+                  <div className="input-item input-item-name ltn__custom-icon">
                     <input type="text" placeholder="Nome" />
                   </div>
-                  <div class="input-item input-item-email ltn__custom-icon">
+                  <div className="input-item input-item-email ltn__custom-icon">
                     <input type="email" placeholder="Email" />
                   </div>
 
                   <textarea
                     style={{ height: "50px" }}
                     placeholder="Descreva seu pedido:"
-                    class="input-group "
+                    className="input-group "
                     aria-label="With textarea"
                   ></textarea>
 
-                  <div class="btn-wrapper mt-0">
+                  <div className="btn-wrapper mt-0">
                     <button
                       type="submit"
-                      class="btn theme-btn-1 btn-effect-1 text-uppercase"
+                      className="btn theme-btn-1 btn-effect-1 text-uppercase"
                     >
                       Enviar
                     </button>
