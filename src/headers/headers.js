@@ -1,5 +1,5 @@
 import "./headers.css";
-import logo from "./../img/logo.png";
+import logo from "./../img/logo_fundo_cortado.jpeg";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checker } from "../request/request";
@@ -25,7 +25,7 @@ export default function Headers({ setlogged, logged }) {
   }, [logged]);
   return (
     <header className="ltn__header-area ltn__header-5 ltn__header-transparent gradient-color-4 pt-2">
-      <div style={{ height: "30px" }} className="ltn__header-top-area">
+      <div style={{ height: "45px" }} className="ltn__header-top-area">
         <div className="container">
           <div className="row">
             <div className="col-md-7">
@@ -87,7 +87,11 @@ export default function Headers({ setlogged, logged }) {
               <div className="site-logo-wrap">
                 <div className="site-logo">
                   <a href="index.html">
-                    <img style={{ height: "80px" }} src={logo} alt="Logo" />
+                    <img
+                      style={{ height: "80px", borderRadius: "10px" }}
+                      src={logo}
+                      alt="Logo"
+                    />
                   </a>
                 </div>
                 <div className="get-support clearfix">

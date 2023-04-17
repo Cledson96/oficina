@@ -8,6 +8,7 @@ import Cotation from "../components/cotation";
 import Services from "../components/services";
 import SlideHome from "../components/slidesHome";
 import Marcas from "../components/marcas";
+import Feeds from "../components/feed";
 
 export default function Home() {
   const [offers, setoffers] = useState();
@@ -47,6 +48,7 @@ export default function Home() {
       <Services></Services>
       <SlideHome></SlideHome>
       <Marcas></Marcas>
+      <Feeds></Feeds>
     </>
   );
 }
