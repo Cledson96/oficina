@@ -1,6 +1,6 @@
 import Headers from "./headers/headers";
 import Home from "./home/home";
-import GetIn from "./GetIn/GetIn";
+import SignIn from "./GetIn/SingIn";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/footer";
@@ -12,7 +12,7 @@ export default function App() {
         <Headers setlogged={setlogged} logged={logged} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/get_in" element={<GetIn setlogged={setlogged} />} />
+          <Route path="/login" element={<SignIn setlogged={setlogged} />} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

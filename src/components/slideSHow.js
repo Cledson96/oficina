@@ -6,40 +6,6 @@ export default function SlideShow() {
       <div className="ltn__slider-area ltn__slider-3  section-bg-1">
         <div className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
           <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3">
-            <div className="ltn__slide-item-inner">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12 align-self-center">
-                    <div className="slide-item-info">
-                      <div className="slide-item-info-inner ltn__slide-animation">
-                        <div className="slide-video mb-50">
-                          <a
-                            className="ltn__video-icon-2 ltn__video-icon-2-border"
-                            href="https://www.youtube.com/embed/tlThdr3O5Qo"
-                            data-rel="lightcase:myCollection"
-                          >
-                            <i className="fa fa-play"></i>
-                          </a>
-                        </div>
-                        <h1 className="slide-title animated ">
-                          Serviços <br /> Profissional & <br /> Qualidade
-                          Garantida
-                        </h1>
-                        <h6 className="slide-sub-title animated">
-                          <span>//</span> Melhor serviço da região
-                        </h6>
-                      </div>
-                    </div>
-                    <div className="slide-item-img">
-                      <img src={slide1} alt="#" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3">
             <div className="ltn__slide-item-inner  text-right text-end">
               <div className="container">
                 <div className="row">
@@ -76,6 +42,38 @@ export default function SlideShow() {
                     </div>
                     <div className="slide-item-img slide-img-left">
                       <img src={fundo} alt="#" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3">
+            <div className="ltn__slide-item-inner">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-12 align-self-center">
+                    <div className="slide-item-info">
+                      <div className="slide-item-info-inner ltn__slide-animation">
+                        <div className="slide-video mb-50">
+                          <a
+                            className="ltn__video-icon-2 ltn__video-icon-2-border"
+                            href="https://www.youtube.com/embed/tlThdr3O5Qo"
+                            data-rel="lightcase:myCollection"
+                          >
+                            <i className="fa fa-play"></i>
+                          </a>
+                        </div>
+                        <h1 className="slide-title animated ">
+                          Serviços com <br /> qualidade & <br /> compromisso
+                        </h1>
+                        <h6 className="slide-sub-title animated">
+                          <span>//</span> O melhor serviço da região
+                        </h6>
+                      </div>
+                    </div>
+                    <div className="slide-item-img">
+                      <img src={slide1} alt="#" />
                     </div>
                   </div>
                 </div>

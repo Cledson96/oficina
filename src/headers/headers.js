@@ -3,17 +3,13 @@ import logo from "./../img/logo_fundo_cortado.jpeg";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checker } from "../request/request";
-import user from "./../img/user.png";
-import cars from "./../img/cars.png";
 
 export default function Headers({ setlogged, logged }) {
-  const navigate = useNavigate();
-  const [name, setname] = useState();
+  const [name, setname] = useState("");
 
   useEffect(() => {
-    console.log("entrei");
     let token = localStorage.getItem("token");
-    console.log(token);
+
     let verification = checker(token);
     verification.then((res) => {
       setname(res.data);
@@ -22,7 +18,8 @@ export default function Headers({ setlogged, logged }) {
     verification.catch(() =>
       console.log("Tivemos um problema para obter os dados!!")
     );
-  }, [logged]);
+  }, []);
+
   return (
     <header className="ltn__header-area ltn__header-5 ltn__header-transparent gradient-color-4 pt-2">
       <div style={{ height: "45px" }} className="ltn__header-top-area">
@@ -32,14 +29,17 @@ export default function Headers({ setlogged, logged }) {
               <div className="ltn__top-bar-menu">
                 <ul>
                   <li>
-                    <a href="mailto:autopecasbodnar@gmail.com.com?Subject=Flower%20greetings%20to%20you">
+                    <a
+                      className="yellow"
+                      href="mailto:autopecasbodnar@gmail.com.com?Subject=Flower%20greetings%20to%20you"
+                    >
                       <i className="icon-mail"></i> autopecasbodnar@gmail.com
                     </a>
                   </li>
                   <li>
-                    <a href="locations">
-                      <i className="icon-placeholder"></i> Radialista Souza
-                      Moreno, 120 - Sitio Cercado-Curitiba - PR
+                    <a className="yellow" href="locations">
+                      <i className="icon-placeholder"></i> Sitio
+                      Cercado-Curitiba - PR
                     </a>
                   </li>
                 </ul>
@@ -54,6 +54,7 @@ export default function Headers({ setlogged, logged }) {
                         <ul>
                           <li>
                             <a
+                              style={{ fontSize: "30px" }}
                               href="https://www.facebook.com/autopecasbodnar"
                               title="Facebook"
                             >
@@ -66,7 +67,10 @@ export default function Headers({ setlogged, logged }) {
                               href="https://www.instagram.com/autopecasbodnar/"
                               title="Instagram"
                             >
-                              <i className="fab fa-instagram"></i>
+                              <i
+                                style={{ fontSize: "35px", marginLeft: "10px" }}
+                                className="fab fa-instagram"
+                              ></i>
                             </a>
                           </li>
                         </ul>
@@ -148,6 +152,68 @@ export default function Headers({ setlogged, logged }) {
               </div>
             </div>
             <div className="ltn__header-options ltn__header-options-2">
+              {logged ? (
+                <div className="ltn__drop-menu user-menu">
+                  <ul>
+                    <li>
+                      <a style={{ width: "200px" }} href="#">
+                        <h1>
+                          <span style={{ color: "red" }}> Olá</span> ,{" "}
+                          {name.split(" ")[0].charAt(0).toUpperCase() +
+                            name.split(" ")[0].substring(1).toLowerCase()}
+                          !
+                        </h1>
+                      </a>
+                      <ul>
+                        <li>
+                          <a
+                            onClick={() => {
+                              localStorage.removeItem("token");
+                              localStorage.removeItem("name");
+                              setlogged(false);
+                            }}
+                          >
+                            Sair
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/cadastro">Cadastro</a>
+                        </li>
+                        <li>
+                          <a href="/conta">Minha conta</a>
+                        </li>
+                        <li>
+                          <a href="/compras">Minhas compras</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                <div className="ltn__drop-menu user-menu">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i className="icon-user"></i>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="/login">Login</a>
+                        </li>
+                        <li>
+                          <a href="/cadastro">Cadastro</a>
+                        </li>
+                        <li>
+                          <a href="/conta">Minha conta</a>
+                        </li>
+                        <li>
+                          <a href="/compras">Minhas compras</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              )}
               <div className="header-search-wrap">
                 <div className="header-search-1">
                   <div className="search-icon">
@@ -170,30 +236,6 @@ export default function Headers({ setlogged, logged }) {
                     </button>
                   </form>
                 </div>
-              </div>
-
-              <div className="ltn__drop-menu user-menu">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i className="icon-user"></i>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="login.html">Login</a>
-                      </li>
-                      <li>
-                        <a href="register.html">Cadastro</a>
-                      </li>
-                      <li>
-                        <a href="account.html">Minha conta</a>
-                      </li>
-                      <li>
-                        <a href="wishlist.html">Minhas compras</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
               </div>
 
               <div className="mini-cart-icon">
