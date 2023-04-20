@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/footer";
 import SignUp from "./GetIn/SingUp";
+//reste
 export default function App() {
   const [logged, setlogged] = useState(false);
   return (
