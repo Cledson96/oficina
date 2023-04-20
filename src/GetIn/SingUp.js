@@ -63,113 +63,88 @@ export default function SignUp({ setscreen, setview, view }) {
     });
   }
   return (
-    <div className="signup_on">
-      {isOpen === true ? (
-        <AlertPassword setIsOpen={setIsOpen}> </AlertPassword>
-      ) : (
-        <></>
-      )}
-      {errorOpen === true ? (
-        <AlertErrorSignUp setIsOpen={setErrorOpen}> </AlertErrorSignUp>
-      ) : (
-        <></>
-      )}
-      {errorCPF === true ? (
-        <AlertErrorCPF setIsOpen={setErrorCPF}> </AlertErrorCPF>
-      ) : (
-        <></>
-      )}
-      {signUp_OK === true ? (
-        <SignUpOK setIsOpen={setsignUp_OK} setscreen={setscreen}></SignUpOK>
-      ) : (
-        <></>
-      )}
-      <div className="header_box">
-        <h1 onClick={() => setscreen("signIn")} className="not_selected">
-          {" "}
-          Login{" "}
-        </h1>{" "}
-        <h1 onClick={() => setscreen("signUp")} className="selected">
-          {" "}
-          Cadastro
-        </h1>
-      </div>
-      <div className="form">
-        <input
-          name="name"
-          placeholder="Nome completo"
-          onChange={(e) =>
-            handleForm({ name: e.target.name, value: e.target.value })
-          }
-        ></input>
-        <input
-          name="email"
-          type="email"
-          placeholder="E-mail"
-          onChange={(e) =>
-            handleForm({ name: e.target.name, value: e.target.value })
-          }
-        ></input>
-        <div className="telephone">
-          <input
-            name="phone"
-            className="phoneOne"
-            placeholder="Telefone principal"
-            onChange={(e) =>
-              handleForm({ name: e.target.name, value: e.target.value })
-            }
-          ></input>
-          <input
-            name="phonecontact"
-            className="phoneOne"
-            placeholder="Telefone de contato (opcional)"
-            onChange={(e) =>
-              handleForm({ name: e.target.name, value: e.target.value })
-            }
-          ></input>
+    <>
+      <div
+        class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
+        data-bs-bg="img/bg/9.jpg"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                <div class="section-title-area ltn__section-title-2">
+                  <h6 class="section-subtitle ltn__secondary-color">
+                    // Bem vindo a autepeças Bodnar
+                  </h6>
+                  <h1 class="section-title white-color">Cadastro</h1>
+                </div>
+                <div class="ltn__breadcrumb-list">
+                  <ul>
+                    <li>
+                      <a href="index.html">Inicio</a>
+                    </li>
+                    <li>Cadastro</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <input
-          name="cpf"
-          placeholder="CPF (opcional)"
-          onChange={(e) =>
-            handleForm({ name: e.target.name, value: e.target.value })
-          }
-        ></input>
-        <div className="fixed">
-          <input
-            name="password"
-            className="password"
-            type={view ? "text" : "password"}
-            placeholder="Senha"
-            onChange={(e) =>
-              handleForm({ name: e.target.name, value: e.target.value })
-            }
-          ></input>
+      </div>
+      <div class="ltn__login-area pb-110">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title-area text-center">
+                <h1 class="section-title">
+                  Cadastre <br />
+                  sua conta
+                </h1>
+                <p>E tenho acesso aos melhores produtos da região.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <div class="account-login-inner">
+                <form action="#" class="ltn__form-box contact-form-box">
+                  <input
+                    type="text"
+                    name="firstname"
+                    placeholder="First Name"
+                  />
+                  <input type="text" name="lastname" placeholder="Last Name" />
+                  <input type="text" name="email" placeholder="Email*" />
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password*"
+                  />
+                  <input
+                    type="password"
+                    name="confirmpassword"
+                    placeholder="Confirm Password*"
+                  />
 
-          {view ? (
-            <img onClick={() => setview(!view)} alt="eyes" src={eye}></img>
-          ) : (
-            <img onClick={() => setview(!view)} alt="eyes" src={eye_not}></img>
-          )}
-        </div>
-        <div className="fixed">
-          <input
-            onChange={(e) => setconfirmPassword(e.target.value)}
-            className="password"
-            type={view ? "text" : "password"}
-            placeholder="Confirmar senha"
-          ></input>
-
-          {view ? (
-            <img onClick={() => setview(!view)} alt="eyes" src={eye}></img>
-          ) : (
-            <img onClick={() => setview(!view)} alt="eyes" src={eye_not}></img>
-          )}
+                  <div class="btn-wrapper">
+                    <button
+                      class="theme-btn-1 btn reverse-color btn-block"
+                      type="submit"
+                    >
+                      CRIAR CONTA
+                    </button>
+                  </div>
+                </form>
+                <div class="by-agree text-center">
+                  <div class="go-to-btn mt-50">
+                    <a href="login">Já possui uma conta? Entre. </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div onClick={() => sendBody()} className="send">
-        Cadastrar
-      </div>
-    </div>
+    </>
   );
 }
