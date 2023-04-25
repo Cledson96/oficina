@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://cledson2503.c41.integrator.host/app";
 
 export function postSignUp(body) {
   const promise = axios.post(`${BASE_URL}/sign_up`, body);

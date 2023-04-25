@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5a4fab08.css",
-    "main.js": "/static/js/main.da721fc4.js",
+    "main.js": "/static/js/main.08996c9f.js",
     "static/media/militec.jpg": "/static/media/militec.43fdca4e10ffa7f23d02.jpg",
     "static/media/slide1.png": "/static/media/slide1.b626ae77a2ac423f0574.png",
     "static/media/oleo.png": "/static/media/oleo.4deedac82284f9badb9d.png",
@@ -23,10 +23,10 @@
     "static/media/logo_fundo_cortado.jpeg": "/static/media/logo_fundo_cortado.b8829c6431eacb9061b6.jpeg",
     "index.html": "/index.html",
     "main.5a4fab08.css.map": "/static/css/main.5a4fab08.css.map",
-    "main.da721fc4.js.map": "/static/js/main.da721fc4.js.map"
+    "main.08996c9f.js.map": "/static/js/main.08996c9f.js.map"
   },
   "entrypoints": [
     "static/css/main.5a4fab08.css",
-    "static/js/main.da721fc4.js"
+    "static/js/main.08996c9f.js"
   ]
 }
