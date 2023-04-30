@@ -1,32 +1,48 @@
 {
   "files": {
     "main.css": "/static/css/main.5a4fab08.css",
-    "main.js": "/static/js/main.08996c9f.js",
+    "main.js": "/static/js/main.07fa6bc8.js",
+    "static/media/manutenção-preventiva-carro-corsa-classic.mp4": "/static/media/manutenção-preventiva-carro-corsa-classic.4e4f5d59ae8ad23ec37e.mp4",
+    "static/media/revisão-completa-carro-ford-ka-ano-2017-mo.mp4": "/static/media/revisão-completa-carro-ford-ka-ano-2017-mo.142fa1c6ec6e43cd714b.mp4",
+    "static/media/revis-xe3-o-do-sistema-de-freio-traseiro-x2.mp4": "/static/media/revis-xe3-o-do-sistema-de-freio-traseiro-x2.f574766ceed10ca86ed4.mp4",
+    "static/media/kit-embreagem-carro-citroën-c3-ano-2003-mot.mp4": "/static/media/kit-embreagem-carro-citroën-c3-ano-2003-mot.9459abad25f4cc13fc8d.mp4",
+    "static/media/troca-do-conjunto-de-xe1-gua-x2022-tubo-d.mp4": "/static/media/troca-do-conjunto-de-xe1-gua-x2022-tubo-d.d831466c0905a549d9e0.mp4",
     "static/media/militec.jpg": "/static/media/militec.43fdca4e10ffa7f23d02.jpg",
+    "static/media/video-318661190434599-acdelco-lubrax-mo.mp4": "/static/media/video-318661190434599-acdelco-lubrax-mo.968295878e1048f16608.mp4",
+    "static/media/sobre.jpg": "/static/media/sobre.6fe1148cce22ad571963.jpg",
     "static/media/slide1.png": "/static/media/slide1.b626ae77a2ac423f0574.png",
     "static/media/oleo.png": "/static/media/oleo.4deedac82284f9badb9d.png",
     "static/media/banner1.png": "/static/media/banner1.d936c5bc451ee2d21e98.png",
     "static/media/wallpaper.jpg": "/static/media/wallpaper.046c37e3fc69cd8d4754.jpg",
     "static/media/dicas.png": "/static/media/dicas.50b4b25d1b163e280d9a.png",
-    "static/media/eye_not.png": "/static/media/eye_not.6f23d33ef3a95692d02c.png",
+    "static/media/wallpaper2.jpg": "/static/media/wallpaper2.6951f397ee80f48969dc.jpg",
     "static/media/preventiva.png": "/static/media/preventiva.43bf356a96d76e4c3c85.png",
-    "static/media/eye.png": "/static/media/eye.e2d99441bdc6518b9e75.png",
+    "static/media/fale-conosco.jpg": "/static/media/fale-conosco.5fe37a83b511e9a40112.jpg",
     "static/media/pecas.jpg": "/static/media/pecas.07937588d9e0614ac4db.jpg",
+    "static/media/foto6.jpg": "/static/media/foto6.6c9c2798259252a7fd44.jpg",
     "static/media/moura.png": "/static/media/moura.c1ba5c64e80714239bcd.png",
+    "static/media/foto2.jpg": "/static/media/foto2.cb32f54551b4ea806a86.jpg",
     "static/media/promocao2.jpg": "/static/media/promocao2.bcde1a348c0537596ec6.jpg",
     "static/media/fundo.jpg": "/static/media/fundo.d166715b49f1605cb527.jpg",
+    "static/media/sobre-2.jpg": "/static/media/sobre-2.d9a9f63551fae7727cd1.jpg",
+    "static/media/foto3.jpg": "/static/media/foto3.de17df55096500c14fad.jpg",
+    "static/media/contato2.jpg": "/static/media/contato2.12a176a23a8bc3816ecb.jpg",
     "static/media/promocao.jpg": "/static/media/promocao.f16c5b95ecf23b0fab40.jpg",
+    "static/media/servicos.webp": "/static/media/servicos.e3132851632ddb9cd39b.webp",
+    "static/media/foto5.jpg": "/static/media/foto5.0123af9e290b776872b0.jpg",
+    "static/media/foto4.jpg": "/static/media/foto4.c344fbff82258952b41f.jpg",
     "static/media/promocao.webp": "/static/media/promocao.1a615970d0ba348ee16e.webp",
+    "static/media/foto1.jpg": "/static/media/foto1.a02067409e825a233e2c.jpg",
     "static/media/continental.png": "/static/media/continental.3290944d5fdde28f502f.png",
     "static/media/cofap.png": "/static/media/cofap.39bfbea110dd181cfe5b.png",
     "static/media/lubrax.jpg": "/static/media/lubrax.fe068859ed215f03b1a1.jpg",
     "static/media/logo_fundo_cortado.jpeg": "/static/media/logo_fundo_cortado.b8829c6431eacb9061b6.jpeg",
     "index.html": "/index.html",
     "main.5a4fab08.css.map": "/static/css/main.5a4fab08.css.map",
-    "main.08996c9f.js.map": "/static/js/main.08996c9f.js.map"
+    "main.07fa6bc8.js.map": "/static/js/main.07fa6bc8.js.map"
   },
   "entrypoints": [
     "static/css/main.5a4fab08.css",
-    "static/js/main.08996c9f.js"
+    "static/js/main.07fa6bc8.js"
   ]
 }

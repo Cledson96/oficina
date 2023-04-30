@@ -1,14 +1,11 @@
 import "./GetIn.css";
-import eye_not from "./../img/eye_not.png";
-import eye from "./../img/eye.png";
+
 import { useState } from "react";
 import { postSignIn } from "../request/request";
 import { useNavigate } from "react-router-dom";
 import wallpaepr from "./../img/wallpaper.jpg";
 
 export default function SignIn({ setscreen, setview, view, setlogged }) {
-  const navigate = useNavigate();
-
   const [data, setdata] = useState({});
 
   function handleForm({ value, name }) {
@@ -30,7 +27,7 @@ export default function SignIn({ setscreen, setview, view, setlogged }) {
       localStorage.setItem("token", data.data.token);
       localStorage.setItem("user", data.data.name);
       setlogged(true);
-      navigate("/");
+      window.location.href = "/";
     });
     post.catch((error) => {
       console.log(error);

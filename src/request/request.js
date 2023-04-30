@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://cledson2503.c41.integrator.host/app";
+//const BASE_URL = "http://localhost:55505";
 
 export function postSignUp(body) {
   const promise = axios.post(`${BASE_URL}/sign_up`, body);
@@ -18,5 +19,15 @@ export function checker(token) {
       token,
     },
   });
+  return promise;
+}
+
+export function get_produtos() {
+  const promise = axios.get(`${BASE_URL}/produtos`);
+  return promise;
+}
+
+export function get_categorias() {
+  const promise = axios.get(`${BASE_URL}/categoria`);
   return promise;
 }

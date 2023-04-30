@@ -1,4 +1,4 @@
-export function AlertPassword({ setIsOpen }) {
+export function AlertPassword({ setconfirmPassword }) {
   return (
     <>
       <div
@@ -12,6 +12,7 @@ export function AlertPassword({ setIsOpen }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: "10000",
         }}
       >
         <div
@@ -33,7 +34,7 @@ export function AlertPassword({ setIsOpen }) {
               backgroundColor: "transparent",
               cursor: "pointer",
             }}
-            onClick={() => setIsOpen(false)}
+            onClick={() => setconfirmPassword(false)}
           >
             X
           </button>
@@ -58,6 +59,7 @@ export function AlertErrorSignUp({ setIsOpen }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: "10000",
         }}
       >
         <div
@@ -135,7 +137,7 @@ export function AlertErrorCPF({ setIsOpen }) {
   );
 }
 
-export function SignUpOK({ setIsOpen, setscreen }) {
+export function SignUpOK() {
   return (
     <>
       <div
@@ -149,6 +151,7 @@ export function SignUpOK({ setIsOpen, setscreen }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: "10000",
         }}
       >
         <div
@@ -163,20 +166,17 @@ export function SignUpOK({ setIsOpen, setscreen }) {
           <p style={{ marginRight: "8px", color: "white" }}>
             Cadastro realizado com sucesso!
           </p>
-          <button
+          <a
+            href="/login"
             style={{
               marginLeft: "auto",
               border: "none",
               backgroundColor: "transparent",
               cursor: "pointer",
             }}
-            onClick={() => {
-              setIsOpen(false);
-              setscreen("signIn");
-            }}
           >
             X
-          </button>
+          </a>
         </div>
       </div>
       ;

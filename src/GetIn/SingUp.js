@@ -1,20 +1,16 @@
 import "./GetIn.css";
-import eye_not from "./../img/eye_not.png";
-import eye from "./../img/eye.png";
+import cadastro from "../img/wallpaper2.jpg";
+
 import { useState } from "react";
-import {
-  AlertPassword,
-  AlertErrorSignUp,
-  AlertErrorCPF,
-  SignUpOK,
-} from "../components/modal";
+
+import { AlertPassword, AlertErrorSignUp, SignUpOK } from "../components/modal";
 import { postSignUp } from "../request/request";
 
-export default function SignUp({ setscreen, setview, view }) {
+export default function SignUp() {
   const [data, setdata] = useState({});
-  const [confirmPassword, setconfirmPassword] = useState();
+  const [confirmPassword, setconfirmPassword] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [errorOpen, setErrorOpen] = useState(false);
+
   const [errorCPF, setErrorCPF] = useState(false);
   const [signUp_OK, setsignUp_OK] = useState(false);
 
@@ -25,18 +21,24 @@ export default function SignUp({ setscreen, setview, view }) {
   }
 
   function sendBody() {
-    if (data.password !== confirmPassword) {
-      setIsOpen(true);
+    if (data.password.length < 6) {
+      alert("Obrigatório no minimo 6 caracteres na senha!");
       return;
     }
+    if (data.password !== data.confirmpassword) {
+      return setconfirmPassword(true);
+    }
     if (!data.name || !data.phone || !data.password || !data.email) {
-      setErrorOpen(true);
+      return setIsOpen(true);
     }
     if (data.cpf) {
       if (data.cpf.length !== 11 || isNaN(data.cpf)) {
         setErrorCPF(true);
         return;
       }
+    }
+    if (data.confirmpassword) {
+      delete data.confirmpassword;
     }
 
     const post = postSignUp(data);
@@ -48,7 +50,7 @@ export default function SignUp({ setscreen, setview, view }) {
     post.catch((error) => {
       if (error.response.status) {
         alert("Email ja cadastrado,favor faça login");
-        setscreen("signIn");
+        // window.location.href = "/";
         return;
       }
 
@@ -64,9 +66,20 @@ export default function SignUp({ setscreen, setview, view }) {
   }
   return (
     <>
+      {confirmPassword ? (
+        <AlertPassword setconfirmPassword={setconfirmPassword}></AlertPassword>
+      ) : (
+        <></>
+      )}
+      {isOpen ? (
+        <AlertErrorSignUp setIsOpen={setIsOpen}></AlertErrorSignUp>
+      ) : (
+        <></>
+      )}
+      {signUp_OK ? <SignUpOK></SignUpOK> : <></>}
       <div
         class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
-        data-bs-bg="img/bg/9.jpg"
+        data-bs-bg={cadastro}
       >
         <div class="container">
           <div class="row">
@@ -81,7 +94,7 @@ export default function SignUp({ setscreen, setview, view }) {
                 <div class="ltn__breadcrumb-list">
                   <ul>
                     <li>
-                      <a href="index.html">Inicio</a>
+                      <a href="/">Inicio</a>
                     </li>
                     <li>Cadastro</li>
                   </ul>
@@ -93,7 +106,7 @@ export default function SignUp({ setscreen, setview, view }) {
       </div>
       <div class="ltn__login-area pb-110">
         <div class="container">
-          <div class="row">
+          <div style={{ alignItems: "center" }} class="row d-flex">
             <div class="col-lg-12">
               <div class="section-title-area text-center">
                 <h1 class="section-title">
@@ -104,35 +117,109 @@ export default function SignUp({ setscreen, setview, view }) {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
+          <div style={{ alignItems: "center" }} class="row d-flex">
+            <div
+              style={{ width: "100%", margin: "0 auto", maxWidth: "710px" }}
+              class="col-lg-6 offset-lg-3"
+            >
               <div class="account-login-inner">
                 <form action="#" class="ltn__form-box contact-form-box">
-                  <input
-                    type="text"
-                    name="firstname"
-                    placeholder="First Name"
-                  />
-                  <input type="text" name="lastname" placeholder="Last Name" />
-                  <input type="text" name="email" placeholder="Email*" />
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password*"
-                  />
-                  <input
-                    type="password"
-                    name="confirmpassword"
-                    placeholder="Confirm Password*"
-                  />
+                  <div
+                    style={{ justifyContent: "space-between" }}
+                    className="row d-flex"
+                  >
+                    <input
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      type="text"
+                      name="name"
+                      placeholder="Nome Completo"
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+
+                    <input
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      type="text"
+                      name="email"
+                      placeholder="Email"
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                  <div
+                    style={{ justifyContent: "space-between" }}
+                    className="row d-flex"
+                  >
+                    <input
+                      type="text"
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      name="phone"
+                      placeholder="Celular"
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+                    <input
+                      type="text"
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      name="phonecontact"
+                      placeholder="Telefone de contato"
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                  <div
+                    style={{ justifyContent: "space-between" }}
+                    className="row d-flex"
+                  >
+                    <input
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      type="password"
+                      name="password"
+                      placeholder="Senha"
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+                    <input
+                      style={{ width: "48%", maxWidth: "350px" }}
+                      onChange={(e) =>
+                        handleForm({
+                          name: e.target.name,
+                          value: e.target.value,
+                        })
+                      }
+                      type="password"
+                      name="confirmpassword"
+                      placeholder="Confirmação de senha"
+                    />
+                  </div>
 
                   <div class="btn-wrapper">
-                    <button
+                    <span
+                      onClick={() => sendBody()}
                       class="theme-btn-1 btn reverse-color btn-block"
-                      type="submit"
                     >
                       CRIAR CONTA
-                    </button>
+                    </span>
                   </div>
                 </form>
                 <div class="by-agree text-center">
