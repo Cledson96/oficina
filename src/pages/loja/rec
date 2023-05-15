@@ -1,11 +1,9 @@
 import capa from "../../img/wallpaper.jpg";
 import { useEffect, useState } from "react";
-import { get_produto, get_ranking, BASE_URL } from "../../request/request";
+import { get_produto, get_categorias, BASE_URL } from "../../request/request";
 export default function Produto(props) {
   const idproduto = window.location.pathname.split("/")[2];
   const [data, setData] = useState();
-  const [qtd, setQtd] = useState(1);
-  const [ranking, setRanking] = useState([]);
   useEffect(() => {
     const product = get_produto(idproduto);
     product.then((res) => {
@@ -15,16 +13,6 @@ export default function Produto(props) {
       console.log("Tivemos um problema para obter os dados!!")
     );
   }, []);
-  useEffect(() => {
-    const rankings = get_ranking();
-    rankings.then((res) => {
-      setRanking(res.data);
-    });
-    rankings.catch(() =>
-      console.log("Tivemos um problema para obter os dados!!")
-    );
-  }, []);
-  console.log(ranking);
   console.log(data);
   return (
     <>
@@ -53,402 +41,6 @@ export default function Produto(props) {
         </div>
       </div>
       {data ? (
-        <div class="ltn__shop-details-area pb-85">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 col-md-12">
-                <div class="ltn__shop-details-inner mb-60">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="ltn__shop-details-img-gallery">
-                        <div class="ltn__shop-details-large-img">
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${data.foto}`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[0] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[0] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[1] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[1] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[2] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[2] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[3] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[3] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[4] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[4] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                          <div class="single-large-img">
-                            <a
-                              href={`${BASE_URL}/${data.fotos[5] || data.foto}`}
-                              data-rel="lightcase:myCollection"
-                              style={{
-                                maxHeight: "600px",
-                                minHeight: "400px",
-                              }}
-                            >
-                              <img
-                                style={{
-                                  maxHeight: "600px",
-                                  minHeight: "400px",
-                                }}
-                                src={`${BASE_URL}/${
-                                  data.fotos[5] || data.foto
-                                }`}
-                                alt="Image"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="ltn__shop-details-small-img slick-arrow-2">
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[0] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[1] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[2] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[3] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[4] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                          <div class="single-small-img">
-                            <img
-                              style={{ width: "75px", height: "75px" }}
-                              src={`${BASE_URL}/${data.fotos[5] || data.foto}`}
-                              alt="Image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="modal-product-info shop-details-info pl-0">
-                        <h3>{data.nome}</h3>
-                        {data.promocao > 0 ? (
-                          <div class="product-price">
-                            <span>
-                              R$
-                              {Number(data.promocao)
-                                .toFixed(2)
-                                .replace(".", ",")}
-                            </span>
-                            <del>
-                              R$
-                              {Number(data.preco).toFixed(2).replace(".", ",")}
-                            </del>
-                          </div>
-                        ) : (
-                          <div class="product-price">
-                            <span>
-                              R$
-                              {Number(data.preco).toFixed(2).replace(".", ",")}
-                            </span>
-                          </div>
-                        )}
-
-                        <div class="ltn__product-details-menu-2">
-                          <ul>
-                            <li>
-                              <div
-                                style={{
-                                  justifyContent: "space-between",
-                                  alignItems: "center",
-                                  padding: "6px",
-                                }}
-                                class="cart-plus-minus d-flex"
-                              >
-                                <i
-                                  style={{ color: "red" }}
-                                  className="fa fa-minus"
-                                  onClick={() => {
-                                    if (qtd > 1) {
-                                      setQtd(qtd - 1);
-                                    }
-                                  }}
-                                ></i>
-                                <input
-                                  type="text"
-                                  value={qtd}
-                                  name="qtybutton"
-                                  class="cart-plus-minus-box"
-                                  style={{ fontSize: "20px" }}
-                                />
-                                <i
-                                  style={{ color: "red" }}
-                                  className="fa fa-plus"
-                                  onClick={() => {
-                                    if (qtd < data.qtd) {
-                                      setQtd(qtd + 1);
-                                    }
-                                  }}
-                                ></i>
-                              </div>
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="theme-btn-1 btn btn-effect-1"
-                                title="Add to Cart"
-                                data-bs-toggle="modal"
-                                data-bs-target="#add_to_cart_modal"
-                              >
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Adicionar ao carrinho</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <hr />
-
-                        <hr />
-                        <div class="ltn__safe-checkout">
-                          <h5>Compra segura</h5>
-                          <img
-                            src="/img/icons/payment-2.png"
-                            alt="Payment Image"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
-                  <div class="ltn__shop-details-tab-menu">
-                    <div class="nav">
-                      <a
-                        class="active show"
-                        data-bs-toggle="tab"
-                        href="#liton_tab_details_1_1"
-                      >
-                        Descrição
-                      </a>
-                    </div>
-                  </div>
-                  <div class="tab-content">
-                    <div
-                      class="tab-pane fade active show"
-                      id="liton_tab_details_1_1"
-                    >
-                      <div class="ltn__shop-details-tab-content-inner">
-                        <h4 class="title-2">{data.nome}</h4>
-                        <p>{data.descricao}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <aside class="sidebar ltn__shop-sidebar ltn__right-sidebar">
-                  <div class="widget ltn__top-rated-product-widget">
-                    <h4 class="ltn__widget-title ltn__widget-title-border">
-                      Produtos mais vendidos
-                    </h4>
-                    <ul>
-                      {ranking.map((ref) => {
-                        return (
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                            }}
-                            class="top-rated-product-item clearfix"
-                          >
-                            <div class="top-rated-product-img">
-                              <a href={`/produto/${ref.id}`}>
-                                <img
-                                  style={{
-                                    maxHeight: "80px",
-                                    minHeight: "80px",
-                                  }}
-                                  src={`${BASE_URL}/${ref.foto}`}
-                                  alt="#"
-                                />
-                              </a>
-                            </div>
-                            <div
-                              style={{ width: "150px", marginLeft: "10px" }}
-                              class="top-rated-product-info"
-                            >
-                              <h6>
-                                <a href={`/produto/${ref.id}`}>{ref.nome}</a>
-                              </h6>
-                              {ref.promocao > 0 ? (
-                                <div class="product-price">
-                                  <span>
-                                    R$
-                                    {Number(ref.promocao)
-                                      .toFixed(2)
-                                      .replace(".", ",")}
-                                  </span>
-                                  <del>
-                                    R$
-                                    {Number(ref.preco)
-                                      .toFixed(2)
-                                      .replace(".", ",")}
-                                  </del>
-                                </div>
-                              ) : (
-                                <div class="product-price">
-                                  <span>
-                                    R$
-                                    {Number(ref.preco)
-                                      .toFixed(2)
-                                      .replace(".", ",")}
-                                  </span>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        );
-                      })}
-                      <li></li>
-                    </ul>
-                  </div>
-                </aside>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : (
         <div class="ltn__shop-details-area pb-85">
           <div class="container">
             <div class="row">
@@ -542,11 +134,28 @@ export default function Produto(props) {
                     </div>
                     <div class="col-md-6">
                       <div class="modal-product-info shop-details-info pl-0">
-                        <h3>Carregando</h3>
-
-                        <div class="product-price">
-                          <span>R$ carregando</span>
-                        </div>
+                        <h3>{data.nome}</h3>
+                        {data.promocao > 0 ? (
+                          <div class="product-price">
+                            <span>
+                              R$
+                              {Number(data.promocao)
+                                .toFixed(2)
+                                .replace(".", ",")}
+                            </span>
+                            <del>
+                              R$
+                              {Number(data.preco).toFixed(2).replace(".", ",")}
+                            </del>
+                          </div>
+                        ) : (
+                          <div class="product-price">
+                            <span>
+                              R$
+                              {Number(data.preco).toFixed(2).replace(".", ",")}
+                            </span>
+                          </div>
+                        )}
 
                         <div class="modal-product-meta ltn__product-details-menu-1">
                           <ul>
@@ -1162,6 +771,8 @@ export default function Produto(props) {
             </div>
           </div>
         </div>
+      ) : (
+        <></>
       )}
     </>
   );

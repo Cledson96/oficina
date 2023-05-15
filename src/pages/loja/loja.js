@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import capa from "../../img/wallpaper.jpg";
-import { get_produtos, get_categorias } from "../../request/request";
-export default function Loja() {
+import { get_produtos, get_categorias, BASE_URL } from "../../request/request";
+
+export default function Loja({ setAdd, add }) {
   const [page, setpage] = useState(1);
   const [qtdPages, setqtdPages] = useState(1);
   const [totalItens, setTotalItens] = useState(1);
@@ -11,6 +12,7 @@ export default function Loja() {
   useEffect(() => {
     const product = get_produtos();
     product.then((res) => {
+      console.log(res.data);
       setData(res.data);
       setTotalItens(res.data.length);
     });
@@ -22,13 +24,30 @@ export default function Loja() {
   useEffect(() => {
     const categoria = get_categorias();
     categoria.then((res) => {
-      console.log(res.data);
       setCategorias(res.data);
     });
     categoria.catch(() =>
       console.log("Tivemos um problema para obter os dados!!")
     );
   }, []);
+
+  function carrinho(item) {
+    const carrinho = localStorage.getItem("carrinho") || "[]";
+    const carrinhoAtualizado = JSON.parse(carrinho);
+    const itemExistente = carrinhoAtualizado.find((i) => i.id === item.id);
+    if (itemExistente) {
+      if (itemExistente.quantidade < itemExistente.qtd) {
+        itemExistente.quantidade += 1;
+      } else {
+        return;
+      }
+    } else {
+      item.quantidade = 1;
+      carrinhoAtualizado.push(item);
+    }
+    localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
+    setAdd(!add);
+  }
 
   function handleSort(option) {
     switch (option) {
@@ -156,27 +175,31 @@ export default function Loja() {
                               <div class="ltn__product-item ltn__product-item-3 text-center">
                                 <div class="product-img">
                                   <a href="product-details.html">
-                                    <img src={ref.foto} alt="#" />
+                                    <img
+                                      style={{
+                                        maxWidth: "326px",
+                                        height: "272px",
+                                      }}
+                                      src={`${BASE_URL}/${ref.foto}`}
+                                      alt="#"
+                                    />
                                   </a>
                                   <div class="product-badge"></div>
                                   <div class="product-hover-action">
                                     <ul>
                                       <li>
                                         <a
-                                          href="#"
+                                          href={`/produto/${ref.id}`}
+                                          target="_blank"
                                           title="Observar"
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#quick_view_modal"
                                         >
                                           <i class="far fa-eye"></i>
                                         </a>
                                       </li>
                                       <li>
                                         <a
-                                          href="#"
+                                          onClick={() => carrinho(ref)}
                                           title="Adicionar ao carrinho"
-                                          data-bs-toggle="modal"
-                                          data-bs-target="#add_to_cart_modal"
                                         >
                                           <i class="fas fa-shopping-cart"></i>
                                         </a>
