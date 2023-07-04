@@ -6,7 +6,14 @@ import { checker } from "../request/request";
 import Cars from "../components/cars";
 import Mobile from "./mobileMenu";
 
-export default function Headers({ setlogged, logged, add, setQtd, qtd }) {
+export default function Headers({
+  setlogged,
+  logged,
+  add,
+  setQtd,
+  qtd,
+  setAdd,
+}) {
   const [name, setname] = useState("");
 
   const verification = window.location.pathname.split("/")[1];
@@ -280,7 +287,7 @@ export default function Headers({ setlogged, logged, add, setQtd, qtd }) {
               </div>
             </div>
           </header>
-          <Cars add={add} setQtd={setQtd}></Cars>
+          <Cars add={add} setQtd={setQtd} setAdd={setAdd}></Cars>
           <Mobile></Mobile>
         </>
       )}

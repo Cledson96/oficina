@@ -1,66 +1,7 @@
-/*
-    Template Name: Autixir
-    Description: Car Services and Auto Mechanic HTML Template
-    Version: 1.0.0
-*/
-/* Single side border-radius  */
-/* BORDER RADIUS */
-/* user select */
-/* box sizing  */
-/* placeholder */
-/* transition  */
-/* transform */
-/* rotate */
-/* scale */
-/* translate */
-/* translate rotate */
-/* skew */
-/* ============================================================
->>> TABLE OF CONTENTS:
-===============================================================
-# Google fonts
-# Gutter Code 
-# Normalize
-# Typography
-# Custom Class
-# input and button type focus outline disable
-# Form input box
-# Text meant only for screen readers.
-# Transition
 
-# Accessibility
-# Globals
-
-# Alignments
-# Clearings
-# Posts and pages
-# Captions
-# Galleries
-# Unit test
-# ScrollUp
-# Owl Carousel 
-# Slick Slider
-# Background Overlay
-# Scrollbar
-# Padding Top
-# Padding Bottom
-# Margin Top
-# Margin Bottom
-# Custom margin Padding
-
-============================================================= */
-/* -------------------------------------
-    Google fonts
-------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap");
 
-/*
-font-family: 'Open Sans', sans-serif;
-font-family: 'Rajdhani', sans-serif;
-*/
-/* ====================================================
-    Gutter Code 
-==================================================== */
+
 .container,
 .container-fluid {
   padding-right: 15px;
@@ -350,7 +291,15 @@ h1,
   font-size: 36px;
   line-height: 1.2;
 }
-
+.ajuste-botao{
+  height: 40px;
+  width: 190px;
+  text-align: center;
+  display: flex !important; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px !important;
+}
 h2,
 .h2 {
   font-size: 30px;

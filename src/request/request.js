@@ -8,6 +8,11 @@ export function get_ranking() {
   return promise;
 }
 
+export function valorFrete(body) {
+  const promise = axios.post(`${BASE_URL}/frete`,body);
+  return promise;
+}
+
 export function postSignUp(body) {
   const promise = axios.post(`${BASE_URL}/sign_up`, body);
   return promise;

@@ -1,11 +1,54 @@
 import capa from "../../img/wallpaper.jpg";
 import { useEffect, useState } from "react";
 import { get_produto, get_ranking, BASE_URL } from "../../request/request";
-export default function Produto(props) {
+export default function Produto({ setAdd, add }) {
   const idproduto = window.location.pathname.split("/")[2];
   const [data, setData] = useState();
   const [qtd, setQtd] = useState(1);
   const [ranking, setRanking] = useState([]);
+
+  function alterarQuantidadeNoCarrinho(itemId) {
+    const carrinho = localStorage.getItem("carrinho") || "[]";
+    const carrinhoAtualizado = JSON.parse(carrinho);
+
+    const itemExistente = carrinhoAtualizado.find(
+      (item) => item.id === itemId.id
+    );
+    if (itemExistente) {
+      itemExistente.quantidade = qtd;
+    } else {
+      if (qtd > itemId.qtd) {
+        itemId.quantidade = itemId.qtd;
+      } else {
+        itemId.quantidade = qtd;
+      }
+
+      carrinhoAtualizado.push(itemId);
+    }
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
+    setAdd(!add); // Atualize o estado para refletir a alteração no componente
+  }
+
+  function carrinho(item) {
+    const carrinho = localStorage.getItem("carrinho") || "[]";
+    const carrinhoAtualizado = JSON.parse(carrinho);
+
+    const itemExistente = carrinhoAtualizado.find((i) => i.id === item.id);
+    if (itemExistente) {
+      if (itemExistente.quantidade < itemExistente.qtd) {
+        itemExistente.quantidade += qtd;
+      } else {
+        return;
+      }
+    } else {
+      item.quantidade = 1;
+      carrinhoAtualizado.push(item);
+    }
+    localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
+    setAdd(!add);
+  }
+
   useEffect(() => {
     const product = get_produto(idproduto);
     product.then((res) => {
@@ -323,11 +366,11 @@ export default function Produto(props) {
                             </li>
                             <li>
                               <a
-                                href="#"
+                                onClick={() =>
+                                  alterarQuantidadeNoCarrinho(data)
+                                }
                                 class="theme-btn-1 btn btn-effect-1"
-                                title="Add to Cart"
-                                data-bs-toggle="modal"
-                                data-bs-target="#add_to_cart_modal"
+                                title="Adicionar ao carrinho"
                               >
                                 <i class="fas fa-shopping-cart"></i>
                                 <span>Adicionar ao carrinho</span>

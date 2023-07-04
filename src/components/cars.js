@@ -1,8 +1,20 @@
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../request/request";
-export default function Cars({ add, setQtd }) {
+export default function Cars({ add, setQtd, setAdd }) {
   const [car, setCar] = useState([]);
   const [total, setTotal] = useState(0);
+
+  function removerItemDoCarrinho(itemId) {
+    const carrinho = localStorage.getItem("carrinho") || "[]";
+    const carrinhoAtualizado = JSON.parse(carrinho);
+
+    const carrinhoFiltrado = carrinhoAtualizado.filter(
+      (item) => item.id !== itemId
+    );
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinhoFiltrado));
+    setAdd(!add); // Atualize o estado para refletir a remoção do item no componente
+  }
   useEffect(() => {
     const carrinho = localStorage.getItem("carrinho");
     const atualizado = JSON.parse(carrinho);
@@ -47,7 +59,10 @@ export default function Cars({ add, setQtd }) {
                           alt="Image"
                         />
                       </a>
-                      <span className="mini-cart-item-delete">
+                      <span
+                        onClick={() => removerItemDoCarrinho(ref.id)}
+                        className="mini-cart-item-delete"
+                      >
                         <i className="icon-cancel"></i>
                       </span>
                     </div>
@@ -76,10 +91,10 @@ export default function Cars({ add, setQtd }) {
               </h5>
             </div>
             <div className="btn-wrapper">
-              <a href="cart.html" className="theme-btn-1 btn btn-effect-1">
+              <a href="/carrinho" className="theme-btn-1 btn btn-effect-1">
                 Ver carrinho
               </a>
-              <a href="cart.html" className="theme-btn-2 btn btn-effect-2">
+              <a href="/carrinho" className="theme-btn-2 btn btn-effect-2">
                 Comprar
               </a>
             </div>
