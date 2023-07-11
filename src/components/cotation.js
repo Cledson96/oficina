@@ -8,10 +8,10 @@ export default function Cotation() {
               <div className="about-us-info-wrap">
                 <div className="section-title-area ltn__section-title-2">
                   <h6 className="section-subtitle ltn__secondary-color">
-                    // A escolha inteligente para o seu carro
+                     A escolha inteligente para o seu carro
                   </h6>
                   <h1 className="section-title">
-                    Cuidando do seu carro do início ao fim<span>.</span>
+                    Cuidando do seu carro do início ao fim
                   </h1>
                   <p>
                     Garantimos a qualidade e satisfação com nossas peças e

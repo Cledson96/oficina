@@ -11,11 +11,9 @@ export default function Feeds() {
             <div className="col-lg-12">
               <div className="section-title-area ltn__section-title-2 text-center">
                 <h6 className="section-subtitle ltn__secondary-color">
-                  // blog & dicas
+                  blog & dicas
                 </h6>
-                <h1 className="section-title">
-                  Informativos<span>.</span>
-                </h1>
+                <h1 className="section-title">Instagram</h1>
               </div>
             </div>
           </div>

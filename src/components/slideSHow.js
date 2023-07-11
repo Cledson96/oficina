@@ -1,5 +1,5 @@
 import slide1 from "./../img/slide1.png";
-import fundo from ".././img/fundo.jpg";
+import fundo from ".././img/capa.jpg";
 export default function SlideShow() {
   return (
     <>
@@ -16,12 +16,12 @@ export default function SlideShow() {
                           // AUTO PEÇAS E MÊCANICA
                         </h6>
                         <h1 className="slide-title animated ">
-                          Autopeças Bodnar, <br /> Qualidade e preço baixo
+                          Autopeças Bodnar, <br /> Qualidade e preço baixo.
                         </h1>
                         <div className="slide-brief animated">
                           <p>
-                            Não deixe seu carro nas mãos erradas, confie na
-                            nossa oficina.
+                            Soluções completas em peças automotivas para atender
+                            todas as suas necessidades.
                           </p>
                         </div>
                         <div className="btn-wrapper animated">
@@ -68,7 +68,7 @@ export default function SlideShow() {
                           Serviços com <br /> qualidade & <br /> compromisso
                         </h1>
                         <h6 className="slide-sub-title animated">
-                          <span>//</span> O melhor serviço da região
+                          <span>//</span> Nossa oficina se destaca pela excelência <br/>e satisfação do cliente.
                         </h6>
                       </div>
                     </div>

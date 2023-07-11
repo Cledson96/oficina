@@ -13,6 +13,7 @@ import foto4 from "../../videos/foto4.jpg";
 import foto5 from "../../videos/foto5.jpg";
 import foto6 from "../../videos/foto6.jpg";
 import logo from "../../img/contato2.jpg";
+import "./servicos.css"
 export default function Servicos() {
   return (
     <>
@@ -54,9 +55,7 @@ export default function Servicos() {
             <div class="col-lg-7 align-self-center">
               <div class="about-us-info-wrap">
                 <div class="section-title-area ltn__section-title-2">
-                  <h1 class="section-title">
-                    Qualidade e confiança<span>.</span>
-                  </h1>
+                  <h1 class="section-title">Qualidade e confiança.</h1>
                   <p>
                     O segredo de um grande sucesso está no trabalho de uma
                     grande equipe.
@@ -64,14 +63,12 @@ export default function Servicos() {
                 </div>
                 <div class="about-us-info-wrap-inner about-us-info-devide">
                   <p>
-                    Bem-vindo à nossa seção de serviços! Na nossa autopeças e
-                    mecânica, oferecemos uma ampla gama de serviços para
-                    garantir que o seu veículo esteja sempre em perfeitas
-                    condições de funcionamento. Desde serviços básicos de
-                    manutenção até reparos mais complexos, a nossa equipe
-                    altamente treinada e experiente está pronta para ajudar a
-                    resolver quaisquer problemas que você possa estar
-                    enfrentando com o seu veículo.
+                    Bem-vindo à nossa seção de serviços! Oferecemos uma ampla
+                    gama de serviços para garantir que o seu veículo esteja
+                    sempre em perfeitas condições de funcionamento. Desde
+                    serviços básicos de manutenção até reparos mais complexos.
+                    Nossa equipe é altamente treinada e experiente está pronta
+                    para ajudar.
                   </p>
                   <div class="list-item-with-icon">
                     <ul>
@@ -101,7 +98,7 @@ export default function Servicos() {
             <div class="col-lg-12">
               <div class="section-title-area ltn__section-title-2 text-center">
                 <h6 class="section-subtitle ltn__secondary-color">
-                  // Serviços
+                   Serviços
                 </h6>
                 <h1 class="section-title">
                   Produtos e serviços de qualidade<span>.</span>
@@ -116,25 +113,24 @@ export default function Servicos() {
                   <i class="icon-maintenance-1"></i>
                 </div>
                 <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">// Manutenção preventiva</h6>
+                  <h6 class="ltn__secondary-color">Manutenção preventiva</h6>
+                  <br></br>
                   <h3>
                     <a href="service-details.html">
-                      Evitando dor de cabeças e gastos adicionais.
+                      Evite dores de cabeça e gastos adicionais.
                     </a>
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Troca de óleo e filtro
+                       Troca de óleo e filtro
                     </li>
                     <li>
-                      <span>//</span> Substituição das pastilhas de freio
+                       Substituição das pastilhas de freio
                     </li>
                     <li>
-                      <span>//</span> Inspeção do sistema de arrefecimento
+                       Inspeção do sistema de arrefecimento
                     </li>
-                    <li>
-                      <span>//</span> Verificação dos pneus
-                    </li>
+                   
                   </ul>
                 </div>
               </div>
@@ -145,7 +141,8 @@ export default function Servicos() {
                   <i class="icon-mechanic"></i>
                 </div>
                 <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">// Produtos de qualidade</h6>
+                  <h6 class="ltn__secondary-color">Produtos de qualidade</h6>
+                  <br></br>
                   <h3>
                     <a href="service-details.html">
                       Produtos com procedencia e qualidade.
@@ -153,16 +150,14 @@ export default function Servicos() {
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Preço justo
+                       Preço justo
                     </li>
                     <li>
-                      <span>//</span> Entregas para todo o Brasil
+                       Entregas para todo o Brasil
                     </li>
+                  
                     <li>
-                      <span>//</span> Garantia
-                    </li>
-                    <li>
-                      <span>//</span> Qualidade
+                       Qualidade
                     </li>
                   </ul>
                 </div>
@@ -174,7 +169,8 @@ export default function Servicos() {
                   <i class="icon-car-parts-3"></i>
                 </div>
                 <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">// Revisão</h6>
+                  <h6 class="ltn__secondary-color">Revisão</h6>
+                  <br></br>
                   <h3>
                     <a href="service-details.html">
                       Para dirigir sem imprevistos.
@@ -182,16 +178,16 @@ export default function Servicos() {
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Verificação do sistema de suspensão
+                       Verificação do sistema de suspensão
                     </li>
                     <li>
-                      <span>//</span> Verificação do sistema de direção
+                       Verificação do sistema de direção
                     </li>
                     <li>
-                      <span>//</span> Verificação do sistema de transmissão
+                       Verificação do sistema de transmissão
                     </li>
                     <li>
-                      <span>//</span> E muito mais...
+                       E muito mais...
                     </li>
                   </ul>
                 </div>
@@ -205,11 +201,9 @@ export default function Servicos() {
           <div class="row mt-5 pt-5">
             <div class="col-lg-12">
               <div class="section-title-area ltn__section-title-2 text-center">
-                <h6 class="section-subtitle ltn__secondary-color">
-                  // Serviços
-                </h6>
+                
                 <h1 class="section-title">
-                  Um pouco do nosso trabalho<span>.</span>
+                  Um pouco do nosso trabalho
                 </h1>
               </div>
             </div>
@@ -357,8 +351,9 @@ export default function Servicos() {
               <div class="call-to-action-inner call-to-action-inner-4 text-center">
                 <div class="section-title-area ltn__section-title-2">
                   <h6 class="section-subtitle ltn__secondary-color">
-                    // Duvidas?Fale conosco! //
+                     Fale conosco! 
                   </h6>
+                  <br></br>
                   <h1 class="section-title white-color">(41)3039-8917</h1>
                 </div>
                 <div class="btn-wrapper">
@@ -379,12 +374,7 @@ export default function Servicos() {
             </div>
           </div>
         </div>
-        <div class="ltn__call-to-4-img-1">
-          <img src="img/bg/12.png" alt="#" />
-        </div>
-        <div class="ltn__call-to-4-img-2">
-          <img src="img/bg/11.png" alt="#" />
-        </div>
+     
       </div>
     </>
   );

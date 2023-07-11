@@ -1,5 +1,6 @@
 import sobre from "./../../img/sobre.jpg";
 import sobre2 from "./../../img/sobre-2.jpg";
+import "./sobre.css";
 export default function Sobre() {
   return (
     <>
@@ -13,7 +14,7 @@ export default function Sobre() {
               <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
                 <div class="section-title-area ltn__section-title-2">
                   <h6 class="section-subtitle ltn__secondary-color">
-                    // Bem vindo a Auto Peças Bodnar!
+                    Bem vindo a Auto Peças Bodnar!
                   </h6>
                   <h1 class="section-title white-color">Sobre nós...</h1>
                 </div>
@@ -49,9 +50,8 @@ export default function Sobre() {
                     // Sobre nós
                   </h6>
                   <h1 class="section-title">
-                    Auto peças Bodnar: paixão por autopeças e mecânica
-                    automotiva
-                    <span>.</span>
+                    Auto peças Bodnar: a essência da paixão pela excelência
+                    automotiva.
                   </h1>
                   <p>
                     "O sucesso nos negócios requer treinamento e disciplina e
@@ -60,22 +60,20 @@ export default function Sobre() {
                   </p>
                 </div>
                 <p>
-                  Bruna e Bruno Bodnar são irmãos empreendedores que, há um ano,
-                  decidiram criar a sua própria empresa de autopeças e mecânica
-                  automotiva. Com ampla experiência no ramo automotivo e uma
-                  paixão por oferecer um serviço de qualidade aos seus clientes,
-                  os irmãos Bodnar decidiram unir forças e criar uma empresa que
-                  pudesse oferecer o melhor atendimento e os melhores produtos
-                  para todos os seus clientes.
+                  A autopeças Bodnar, foi fundada em 15 de maio de 2022, pelos
+                  irmãos Bruna e Bruno Bodnar. Com a ampla experiência no ramo
+                  automotivo e uma paixão por oferecer um serviço de qualidade
+                  aos seus clientes, os irmãos Bodnar decidiram unir forças e
+                  criar uma empresa que pudesse oferecer o melhor atendimento e
+                  os melhores produtos para todos os perfis de clientes.
                 </p>
                 <br></br>
                 <p>
-                  Desde então, a empresa dos irmãos Bodnar tem sido um sucesso,
-                  com uma equipe altamente qualificada e apaixonada pelo que
-                  faz. A empresa oferece uma grande variedade de peças e
-                  serviços, desde peças automotivas de alta qualidade até
-                  serviços de manutenção e reparo, sempre com o objetivo de
-                  garantir a satisfação total do cliente.
+                  Desde então, o empreendimento dos irmãos Bodnar tem sido um
+                  sucesso, com uma equipe altamente qualificada e apaixonada
+                  pelo que faz. A loja oferece uma grande variedade de peças
+                  automotivas e serviços de manutenção e reparo de veículos
+                  leves.
                 </p>
                 <br></br>
                 <p>
@@ -83,8 +81,8 @@ export default function Sobre() {
                   comprometidos em oferecer a melhor experiência possível aos
                   seus clientes, sempre inovando e buscando as melhores soluções
                   para atender às necessidades de cada cliente. Se você precisa
-                  de peças automotivas ou serviços de mecânica automotiva de
-                  qualidade, não hesite em visitar a empresa dos irmãos Bodnar.
+                  de peças automotivas ou serviços de mecânica automotiva, não
+                  hesite em visitar a loja dos irmãos Bodnar.
                 </p>
                 <div class="btn-wrapper">
                   <a href="/servicos" class="theme-btn-3 btn btn-effect-4">
@@ -102,7 +100,7 @@ export default function Sobre() {
             <div class="col-lg-12">
               <div class="section-title-area ltn__section-title-2 text-center">
                 <h1 class="section-title">
-                  Por que escolher <br></br> a nossa empresa ?<span>.</span>
+                  Por que escolher <br></br> a nossa empresa ?
                 </h1>
               </div>
             </div>
@@ -122,9 +120,8 @@ export default function Sobre() {
                 </div>
                 <div class="ltn__feature-info">
                   <p>
-                    Escolha a qualidade e confiança em serviços de autopeças e
-                    mecânica automotiva. Com a nossa equipe de especialistas,
-                    você pode ter certeza de que seu carro estará em boas mãos.
+                    Qualidade e confiança em autopeças e mecânica automotiva,
+                    com especialistas cuidando do seu carro.
                   </p>
                 </div>
               </div>
@@ -138,15 +135,13 @@ export default function Sobre() {
                     </span>
                   </div>
                   <h3>
-                    <a href="service-details.html">
-                      Nosso compromisso com um atendimento excepcional
-                    </a>
+                    <a href="service-details.html">Comprometimento</a>
                   </h3>
                 </div>
                 <div class="ltn__feature-info">
                   <p>
                     Nosso objetivo é superar as expectativas de nossos clientes,
-                    proporcionando uma experiência de atendimento de excelência.
+                    proporcionando atendimento com excelência.
                   </p>
                 </div>
               </div>
@@ -160,15 +155,12 @@ export default function Sobre() {
                     </span>
                   </div>
                   <h3>
-                    <a href="service-details.html">
-                      {" "}
-                      Produtos de excelência em qualidade e procedência
-                    </a>
+                    <a href="service-details.html"> Produtos de qualidade</a>
                   </h3>
                 </div>
                 <div class="ltn__feature-info">
                   <p>
-                    Nossos fornecedores são selecionados com rigor, assegurando
+                    Nossos fornecedores são selecionados, assegurando
                     a procedência e a confiabilidade de cada item em nosso
                     estoque.
                   </p>
@@ -207,7 +199,7 @@ export default function Sobre() {
                   // Feedbacks
                 </h6>
                 <h1 class="section-title">
-                  O que nossos clientes dizem<span>:</span>
+                  O que nossos clientes dizem:  
                 </h1>
               </div>
             </div>

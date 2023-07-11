@@ -11,12 +11,11 @@ export default function BoxService() {
                 </div>
                 <div className="ltn__feature-info">
                   <h2>
-                    <a href="service.html">Serviços especializados</a>
+                    <a href="service.html">Serviços </a>
                   </h2>
                   <p className="mt-2">
-                    Serviços especializados em reparos e manutenção automotiva.
-                    Diagnósticos precisos e soluções completas para garantir a
-                    qualidade de seu veículo.
+                    Reparos e manutenção automotiva especializados. Diagnósticos
+                    precisos, soluções completas para qualidade do veículo.
                   </p>
                 </div>
                 <div className="btn-wrapper">
@@ -37,7 +36,7 @@ export default function BoxService() {
                 <div className="ltn__feature-info">
                   <h2>
                     <a href="team.html" className="white-color-im">
-                      Mecânico especializado
+                      Mecânico
                     </a>
                   </h2>
                   <p className="mt-2">

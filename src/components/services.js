@@ -7,11 +7,9 @@ export default function Services() {
             <div className="col-lg-12">
               <div className="section-title-area ltn__section-title-2 text-center">
                 <h6 className="section-subtitle ltn__secondary-color">
-                  // Serviços
+                  Serviços
                 </h6>
-                <h1 className="section-title">
-                  Diagnóstico completo<span>.</span>
-                </h1>
+                <h1 className="section-title">Diagnóstico completo</h1>
               </div>
             </div>
           </div>
@@ -23,7 +21,7 @@ export default function Services() {
                 </div>
                 <div className="service-item-brief">
                   <h6 className="ltn__secondary-color text-uppercase mb-2">
-                    // Deixando-o novo
+                    Deixando-o novo
                   </h6>
                   <h3>
                     <a href="service-details.html">
@@ -32,15 +30,9 @@ export default function Services() {
                   </h3>
                   <hr />
                   <ul>
-                    <li>
-                      <span>//</span> Serviços rápidos
-                    </li>
-                    <li>
-                      <span>//</span> Serviços customizados
-                    </li>
-                    <li>
-                      <span>//</span> Preço e qualidade
-                    </li>
+                    <li>Serviços rápidos</li>
+                    <li>Serviços customizados</li>
+                    <li>Preço e qualidade</li>
                   </ul>
                 </div>
               </div>
@@ -52,7 +44,7 @@ export default function Services() {
                 </div>
                 <div className="service-item-brief">
                   <h6 className="ltn__secondary-color text-uppercase mb-2">
-                    // Manutenção preventiva
+                    Manutenção preventiva
                   </h6>
                   <h3>
                     <a href="service-details.html">
@@ -61,15 +53,9 @@ export default function Services() {
                   </h3>
                   <hr />
                   <ul>
-                    <li>
-                      <span>//</span> Verificação do sistema de arrefecimento
-                    </li>
-                    <li>
-                      <span>//</span> Inspeção de freios
-                    </li>
-                    <li>
-                      <span>//</span> Verificação dos fluidos
-                    </li>
+                    <li>Verificação do sistema de arrefecimento</li>
+                    <li>Inspeção de freios</li>
+                    <li>Verificação dos fluidos</li>
                   </ul>
                 </div>
               </div>
@@ -81,7 +67,7 @@ export default function Services() {
                 </div>
                 <div className="service-item-brief">
                   <h6 className="ltn__secondary-color text-uppercase mb-2">
-                    // Peças de qualidade
+                    Peças de qualidade
                   </h6>
                   <h3>
                     <a href="service-details.html">
@@ -91,15 +77,9 @@ export default function Services() {
                   </h3>
                   <hr />
                   <ul>
-                    <li>
-                      <span>//</span> Entrega rápida e segura em toda a região
-                    </li>
-                    <li>
-                      <span>//</span> Atendimento personalizado
-                    </li>
-                    <li>
-                      <span>//</span> Catálogos online
-                    </li>
+                    <li>Entrega rápida e segura em toda a região</li>
+                    <li>Atendimento personalizado</li>
+                    <li>Catálogos online</li>
                   </ul>
                 </div>
               </div>

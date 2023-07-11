@@ -1,4 +1,5 @@
 import faleconosco from "../../img/fale-conosco.jpg";
+import "./contato.css";
 export default function Contato() {
   return (
     <>
@@ -34,10 +35,10 @@ export default function Contato() {
                 <div class="ltn__contact-address-icon">
                   <img src="img/icons/10.png" alt="Icon Image" />
                 </div>
-                <h3>Nossos emails</h3>
+                <h3>Nossos e-mails</h3>
                 <p>
                   autopecasbodnar@gmail.com <br></br>
-                  contato@autopecasboodnar.com.br
+                  contato@autopecasbodnar.com.br
                 </p>
               </div>
             </div>
@@ -59,8 +60,7 @@ export default function Contato() {
                 </div>
                 <h3>Endereço</h3>
                 <p>
-                  Rua: Radialista Souza Moreno, 120 <br></br> Sítio Cercado
-                  <br></br>
+                  Rua: Radialista Souza Moreno, 120 <br></br> Sítio Cercado -
                   Curitiba, PR
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function Contato() {
                           <option>Selecione o serviço</option>
                           <option>Manutenção preventiva</option>
                           <option>Revisão </option>
-                          <option>Troca de peças </option>
+                          <option>Peças </option>
                           <option>Outros</option>
                         </select>
                       </div>

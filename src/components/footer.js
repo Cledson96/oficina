@@ -14,27 +14,27 @@ export default function Footer() {
                 <div className="col-xl-4 col-md-5">
                   <div className="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1">
                     <h6 className="ltn__secondary-color text-uppercase">
-                      // Nossos horários
+                      Nossos horários
                     </h6>
                     <h4 className="footer-title mt-2">Marque seu horário</h4>
                     <ul>
                       <li>
-                        Segunda <span>08:00AM - 18:00PM</span>
+                        Segunda <span>08h00 às 18h00</span>
                       </li>
                       <li>
-                        Terça <span>08:00AM - 18:00PM</span>
+                        Terça <span>08h00 às 18h00</span>
                       </li>
                       <li>
-                        Quarta <span>08:00AM - 18:00PM</span>
+                        Quarta <span>08h00 às 18h00</span>
                       </li>
                       <li>
-                        Quinta <span>08:00AM - 18:00PM</span>
+                        Quinta <span>08h00 às 18h00</span>
                       </li>
                       <li>
-                        Sexta <span>08:00AM - 18:00PM</span>
+                        Sexta <span>08h00 às 18h00</span>
                       </li>
                       <li>
-                        Sabado <span>08:00AM - 16:00PM</span>
+                        Sabado <span>08h00 às 15h00</span>
                       </li>
                       <li>
                         Domingo <span>Fechado</span>
@@ -48,44 +48,23 @@ export default function Footer() {
                     <div className="footer-menu">
                       <ul>
                         <li>
-                          <a href="service.html">Manutenção preventiva</a>
+                          <a href="servicos">Manutenção preventiva</a>
+                        </li>
+
+                        <li>
+                          <a href="servicos">Instalação de peças automotivas</a>
                         </li>
                         <li>
-                          <a href="service.html">Troca de óleo</a>
+                          <a href="servicos">Serviços de embreagem</a>
                         </li>
                         <li>
-                          <a href="service.html">Troca dos freios</a>
+                          <a href="servicos">Serviços de suspensão</a>
                         </li>
                         <li>
-                          <a href="service.html">
-                            Instalação de peças automotivas
-                          </a>
+                          <a href="servicos">Serviços de freio</a>
                         </li>
                         <li>
-                          <a href="service.html">Inspeção veicular</a>
-                        </li>
-                        <li>
-                          <a href="service.html">
-                            Serviços de alinhamento e balanceamento
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="footer-menu">
-                      <ul>
-                        <li>
-                          <a href="service.html">Estoque de peças</a>
-                        </li>
-                        <li>
-                          <a href="service.html">
-                            Peças com garantias e procedencia
-                          </a>
-                        </li>
-                        <li>
-                          <a href="service.html">Catálogo de peças</a>
-                        </li>
-                        <li>
-                          <a href="service.html">Vendas online</a>
+                          <a href="servicos">Troca de óleo</a>
                         </li>
                       </ul>
                     </div>
@@ -103,7 +82,7 @@ export default function Footer() {
                         </ul>
                       </div>
                       <h4 className="ltn__blog-title">
-                        <a href="blog-details.html">
+                        <a href="blog-details">
                           10% de desconto no kit de correia dentada e tensor.
                         </a>
                       </h4>
@@ -117,7 +96,7 @@ export default function Footer() {
                         </ul>
                       </div>
                       <h4 className="ltn__blog-title">
-                        <a href="blog-details.html">
+                        <a href="blog-details">
                           Troca de óleo + filtro a partir de R$135,00.
                         </a>
                       </h4>
@@ -131,7 +110,7 @@ export default function Footer() {
                         </ul>
                       </div>
                       <h4 className="ltn__blog-title">
-                        <a href="blog-details.html">
+                        <a href="blog-details">
                           Desejamos uma feliz pascoa a todos!!
                         </a>
                       </h4>
@@ -147,7 +126,7 @@ export default function Footer() {
                 <div className="col-md-6 col-12">
                   <div className="site-logo-wrap">
                     <div className="site-logo">
-                      <a href="index.html">
+                      <a href="index">
                         <img
                           style={{ height: "80px", borderRadius: "10px" }}
                           src={logo}
@@ -159,7 +138,7 @@ export default function Footer() {
                       <div className="get-support-info">
                         <h6>Copyright & Design By</h6>
                         <h4>
-                          Cledson Santos - Cledson1996@gmail.com
+                          Cledson Santos às Cledson1996@gmail.com
                           <span className="current-year"></span>
                         </h4>
                       </div>
