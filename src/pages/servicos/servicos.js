@@ -18,20 +18,20 @@ export default function Servicos() {
   return (
     <>
       <div
-        class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
+        className="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
         data-bs-bg={img}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
-                <div class="section-title-area ltn__section-title-2">
-                  <h6 class="section-subtitle ltn__secondary-color">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                <div className="section-title-area ltn__section-title-2">
+                  <h6 className="section-subtitle ltn__secondary-color">
                     // BEM VINDO A AUTO PEÇAS BODNAR!
                   </h6>
-                  <h1 class="section-title white-color">Nossos serviços</h1>
+                  <h1 className="section-title white-color">Nossos serviços</h1>
                 </div>
-                <div class="ltn__breadcrumb-list">
+                <div className="ltn__breadcrumb-list">
                   <ul>
                     <li>
                       <a href="/">Inicio</a>
@@ -44,24 +44,24 @@ export default function Servicos() {
           </div>
         </div>
       </div>
-      <div class="ltn__about-us-area pb-115">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 align-self-center">
-              <div class="about-us-img-wrap ltn__img-shape-left  about-img-left">
+      <div className="ltn__about-us-area pb-115">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5 align-self-center">
+              <div className="about-us-img-wrap ltn__img-shape-left  about-img-left">
                 <img src={promocao} alt="Image" />
               </div>
             </div>
-            <div class="col-lg-7 align-self-center">
-              <div class="about-us-info-wrap">
-                <div class="section-title-area ltn__section-title-2">
-                  <h1 class="section-title">Qualidade e confiança.</h1>
+            <div className="col-lg-7 align-self-center">
+              <div className="about-us-info-wrap">
+                <div className="section-title-area ltn__section-title-2">
+                  <h1 className="section-title">Qualidade e confiança.</h1>
                   <p>
                     O segredo de um grande sucesso está no trabalho de uma
                     grande equipe.
                   </p>
                 </div>
-                <div class="about-us-info-wrap-inner about-us-info-devide">
+                <div className="about-us-info-wrap-inner about-us-info-devide">
                   <p>
                     Bem-vindo à nossa seção de serviços! Oferecemos uma ampla
                     gama de serviços para garantir que o seu veículo esteja
@@ -70,7 +70,7 @@ export default function Servicos() {
                     Nossa equipe é altamente treinada e experiente está pronta
                     para ajudar.
                   </p>
-                  <div class="list-item-with-icon">
+                  <div className="list-item-with-icon">
                     <ul>
                       <li>
                         <a href="/contato">Suporte online</a>
@@ -92,28 +92,28 @@ export default function Servicos() {
           </div>
         </div>
       </div>
-      <div class="ltn__service-area section-bg-1 pt-115 pb-70">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title-area ltn__section-title-2 text-center">
-                <h6 class="section-subtitle ltn__secondary-color">
+      <div className="ltn__service-area section-bg-1 pt-115 pb-70">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title-area ltn__section-title-2 text-center">
+                <h6 className="section-subtitle ltn__secondary-color">
                    Serviços
                 </h6>
-                <h1 class="section-title">
+                <h1 className="section-title">
                   Produtos e serviços de qualidade<span>.</span>
                 </h1>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="ltn__service-item-2 white-bg">
-                <div class="service-item-icon">
-                  <i class="icon-maintenance-1"></i>
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="ltn__service-item-2 white-bg">
+                <div className="service-item-icon">
+                  <i className="icon-maintenance-1"></i>
                 </div>
-                <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">Manutenção preventiva</h6>
+                <div className="service-item-brief">
+                  <h6 className="ltn__secondary-color">Manutenção preventiva</h6>
                   <br></br>
                   <h3>
                     <a href="service-details.html">
@@ -135,13 +135,13 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="ltn__service-item-2 white-bg">
-                <div class="service-item-icon">
-                  <i class="icon-mechanic"></i>
+            <div className="col-lg-4 col-md-6">
+              <div className="ltn__service-item-2 white-bg">
+                <div className="service-item-icon">
+                  <i className="icon-mechanic"></i>
                 </div>
-                <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">Produtos de qualidade</h6>
+                <div className="service-item-brief">
+                  <h6 className="ltn__secondary-color">Produtos de qualidade</h6>
                   <br></br>
                   <h3>
                     <a href="service-details.html">
@@ -163,13 +163,13 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="ltn__service-item-2 white-bg">
-                <div class="service-item-icon">
-                  <i class="icon-car-parts-3"></i>
+            <div className="col-lg-4 col-md-6">
+              <div className="ltn__service-item-2 white-bg">
+                <div className="service-item-icon">
+                  <i className="icon-car-parts-3"></i>
                 </div>
-                <div class="service-item-brief">
-                  <h6 class="ltn__secondary-color">Revisão</h6>
+                <div className="service-item-brief">
+                  <h6 className="ltn__secondary-color">Revisão</h6>
                   <br></br>
                   <h3>
                     <a href="service-details.html">
@@ -196,32 +196,32 @@ export default function Servicos() {
           </div>
         </div>
       </div>
-      <div class="ltn__gallery-area mb-120">
-        <div class="container">
-          <div class="row mt-5 pt-5">
-            <div class="col-lg-12">
-              <div class="section-title-area ltn__section-title-2 text-center">
+      <div className="ltn__gallery-area mb-120">
+        <div className="container">
+          <div className="row mt-5 pt-5">
+            <div className="col-lg-12">
+              <div className="section-title-area ltn__section-title-2 text-center">
                 
-                <h1 class="section-title">
+                <h1 className="section-title">
                   Um pouco do nosso trabalho
                 </h1>
               </div>
             </div>
           </div>
-          <div class="ltn__gallery-active row ltn__gallery-style-1">
-            <div class="ltn__gallery-sizer col-1"></div>
+          <div className="ltn__gallery-active row ltn__gallery-style-1">
+            <div className="ltn__gallery-sizer col-1"></div>
 
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video1} data-rel="lightcase:myCollection">
                     <img src={foto1} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">
                       Revisão do sistema de freio traseiro.
@@ -234,17 +234,17 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video2} data-rel="lightcase:myCollection">
                     <img src={foto2} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">
                       Troca do conjunto de água.
@@ -257,17 +257,17 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video5} data-rel="lightcase:myCollection">
                     <img src={foto5} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">Manutenção preventiva</a>
                   </h4>
@@ -279,17 +279,17 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video3} data-rel="lightcase:myCollection">
                     <img src={foto3} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">Manutenção preventiva</a>
                   </h4>
@@ -297,17 +297,17 @@ export default function Servicos() {
                 </div>
               </div>
             </div>
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video4} data-rel="lightcase:myCollection">
                     <img src={foto4} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">Kit embreagem:</a>
                   </h4>
@@ -316,17 +316,17 @@ export default function Servicos() {
               </div>
             </div>
 
-            <div class="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
-              <div class="ltn__gallery-item-inner">
-                <div class="ltn__gallery-item-img">
+            <div className="ltn__gallery-item filter_category_2 col-md-4 col-sm-6 col-12">
+              <div className="ltn__gallery-item-inner">
+                <div className="ltn__gallery-item-img">
                   <a href={video6} data-rel="lightcase:myCollection">
                     <img src={foto6} alt="Image" />
-                    <span class="ltn__gallery-action-icon">
-                      <i class="fas fa-video"></i>
+                    <span className="ltn__gallery-action-icon">
+                      <i className="fas fa-video"></i>
                     </span>
                   </a>
                 </div>
-                <div class="ltn__gallery-item-info">
+                <div className="ltn__gallery-item-info">
                   <h4>
                     <a href="portfolio-details.html">Revisão completa:</a>
                   </h4>
@@ -342,30 +342,30 @@ export default function Servicos() {
         </div>
       </div>
       <div
-        class="ltn__call-to-action-area ltn__call-to-action-4 bg-image pt-115 pb-120"
+        className="ltn__call-to-action-area ltn__call-to-action-4 bg-image pt-115 pb-120"
         data-bs-bg={logo}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="call-to-action-inner call-to-action-inner-4 text-center">
-                <div class="section-title-area ltn__section-title-2">
-                  <h6 class="section-subtitle ltn__secondary-color">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="call-to-action-inner call-to-action-inner-4 text-center">
+                <div className="section-title-area ltn__section-title-2">
+                  <h6 className="section-subtitle ltn__secondary-color">
                      Fale conosco! 
                   </h6>
                   <br></br>
-                  <h1 class="section-title white-color">(41)3039-8917</h1>
+                  <h1 className="section-title white-color">(41)3039-8917</h1>
                 </div>
-                <div class="btn-wrapper">
+                <div className="btn-wrapper">
                   <a
                     href="tel:+4130398917"
-                    class="theme-btn-1 btn btn-effect-1"
+                    className="theme-btn-1 btn btn-effect-1"
                   >
                     LIGUE AGORA
                   </a>
                   <a
                     href="/contato"
-                    class="btn btn-transparent btn-effect-3 white-color"
+                    className="btn btn-transparent btn-effect-3 white-color"
                   >
                     CONTATO
                   </a>

@@ -76,20 +76,20 @@ export default function Loja({ setAdd, add }) {
   return (
     <>
       <div
-        class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image plr--9"
+        className="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image plr--9"
         data-bs-bg={capa}
       >
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
-                <div class="section-title-area ltn__section-title-2">
-                  <h6 class="section-subtitle ltn__secondary-color">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                <div className="section-title-area ltn__section-title-2">
+                  <h6 className="section-subtitle ltn__secondary-color">
                     // A sua melhor compra
                   </h6>
-                  <h1 class="section-title white-color">Loja</h1>
+                  <h1 className="section-title white-color">Loja</h1>
                 </div>
-                <div class="ltn__breadcrumb-list">
+                <div className="ltn__breadcrumb-list">
                   <ul>
                     <li>
                       <a href="index.html">Inicio</a>
@@ -102,37 +102,37 @@ export default function Loja({ setAdd, add }) {
           </div>
         </div>
       </div>
-      <div class="ltn__product-area ltn__product-gutter mb-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 order-lg-2">
-              <div class="ltn__shop-options">
+      <div className="ltn__product-area ltn__product-gutter mb-120">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 order-lg-2">
+              <div className="ltn__shop-options">
                 <ul>
                   <li>
-                    <div class="ltn__grid-list-tab-menu ">
-                      <div class="nav">
+                    <div className="ltn__grid-list-tab-menu ">
+                      <div className="nav">
                         <a
-                          class="active show"
+                          className="active show"
                           data-bs-toggle="tab"
                           href="#liton_product_grid"
                         >
-                          <i class="fas fa-th-large"></i>
+                          <i className="fas fa-th-large"></i>
                         </a>
                         <a data-bs-toggle="tab" href="#liton_product_list">
-                          <i class="fas fa-list"></i>
+                          <i className="fas fa-list"></i>
                         </a>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <div class="showing-product-number text-right">
+                    <div className="showing-product-number text-right">
                       <span>
                         mostrando {page}–{qtdPages} de {totalItens} resultados
                       </span>
                     </div>
                   </li>
                   <li>
-                    <div class="short-by text-center">
+                    <div className="short-by text-center">
                       <select>
                         <option value="relevancia">Relevancia</option>
                         <option
@@ -164,16 +164,16 @@ export default function Loja({ setAdd, add }) {
                   </li>
                 </ul>
               </div>
-              <div class="tab-content">
-                <div class="tab-pane fade active show" id="liton_product_grid">
-                  <div class="ltn__product-tab-content-inner ltn__product-grid-view">
-                    <div class="row">
+              <div className="tab-content">
+                <div className="tab-pane fade active show" id="liton_product_grid">
+                  <div className="ltn__product-tab-content-inner ltn__product-grid-view">
+                    <div className="row">
                       {data ? (
                         data.map((ref) => {
                           return (
-                            <div class="col-sm-6 col-6">
-                              <div class="ltn__product-item ltn__product-item-3 text-center">
-                                <div class="product-img">
+                            <div className="col-sm-6 col-6">
+                              <div className="ltn__product-item ltn__product-item-3 text-center">
+                                <div className="product-img">
                                   <a href="product-details.html">
                                     <img
                                       style={{
@@ -184,8 +184,8 @@ export default function Loja({ setAdd, add }) {
                                       alt="#"
                                     />
                                   </a>
-                                  <div class="product-badge"></div>
-                                  <div class="product-hover-action">
+                                  <div className="product-badge"></div>
+                                  <div className="product-hover-action">
                                     <ul>
                                       <li>
                                         <a
@@ -193,7 +193,7 @@ export default function Loja({ setAdd, add }) {
                                           target="_blank"
                                           title="Observar"
                                         >
-                                          <i class="far fa-eye"></i>
+                                          <i className="far fa-eye"></i>
                                         </a>
                                       </li>
                                       <li>
@@ -201,20 +201,20 @@ export default function Loja({ setAdd, add }) {
                                           onClick={() => carrinho(ref)}
                                           title="Adicionar ao carrinho"
                                         >
-                                          <i class="fas fa-shopping-cart"></i>
+                                          <i className="fas fa-shopping-cart"></i>
                                         </a>
                                       </li>
                                     </ul>
                                   </div>
                                 </div>
-                                <div class="product-info">
-                                  <h2 class="product-title">
+                                <div className="product-info">
+                                  <h2 className="product-title">
                                     <a href="product-details.html">
                                       {ref.nome}
                                     </a>
                                   </h2>
                                   {ref.promocao > 0 ? (
-                                    <div class="product-price">
+                                    <div className="product-price">
                                       <span>
                                         R$
                                         {Number(ref.promocao)
@@ -229,7 +229,7 @@ export default function Loja({ setAdd, add }) {
                                       </del>
                                     </div>
                                   ) : (
-                                    <div class="product-price">
+                                    <div className="product-price">
                                       <span>
                                         R$
                                         {Number(ref.preco)
@@ -239,7 +239,7 @@ export default function Loja({ setAdd, add }) {
                                     </div>
                                   )}
 
-                                  <div class="product-info-brief">
+                                  <div className="product-info-brief">
                                     <ul>
                                       <li>Marca: {ref.marca}</li>
                                       <li>Quantidade em estoque: {ref.qtd}</li>
@@ -256,27 +256,27 @@ export default function Loja({ setAdd, add }) {
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="liton_product_list">
-                  <div class="ltn__product-tab-content-inner ltn__product-list-view">
-                    <div class="row">
-                      <div class="col-lg-12">
+                <div className="tab-pane fade" id="liton_product_list">
+                  <div className="ltn__product-tab-content-inner ltn__product-list-view">
+                    <div className="row">
+                      <div className="col-lg-12">
                         {data ? (
                           data.map((ref) => {
                             return (
-                              <div class="ltn__product-item ltn__product-item-3">
-                                <div class="product-img">
+                              <div className="ltn__product-item ltn__product-item-3">
+                                <div className="product-img">
                                   <a href="product-details.html">
                                     <img src={ref.foto} alt="#" />
                                   </a>
                                 </div>
-                                <div class="product-info">
-                                  <h2 class="product-title">
+                                <div className="product-info">
+                                  <h2 className="product-title">
                                     <a href="product-details.html">
                                       {ref.nome}
                                     </a>
                                   </h2>
                                   {ref.promocao > 0 ? (
-                                    <div class="product-price">
+                                    <div className="product-price">
                                       <span>
                                         R$
                                         {Number(ref.promocao)
@@ -291,7 +291,7 @@ export default function Loja({ setAdd, add }) {
                                       </del>
                                     </div>
                                   ) : (
-                                    <div class="product-price">
+                                    <div className="product-price">
                                       <span>
                                         R${" "}
                                         {Number(ref.preco)
@@ -301,16 +301,16 @@ export default function Loja({ setAdd, add }) {
                                     </div>
                                   )}
 
-                                  <div class="product-info-brief">
+                                  <div className="product-info-brief">
                                     <ul>
                                       <li>Marca: {ref.marca}</li>
                                       <li>Quantidade em estoque: {ref.qtd}</li>
                                     </ul>
                                   </div>
-                                  <div class="product-brief">
+                                  <div className="product-brief">
                                     <p>{ref.descricao}</p>
                                   </div>
-                                  <div class="product-hover-action">
+                                  <div className="product-hover-action">
                                     <ul>
                                       <li>
                                         <a
@@ -319,7 +319,7 @@ export default function Loja({ setAdd, add }) {
                                           data-bs-toggle="modal"
                                           data-bs-target="#quick_view_modal"
                                         >
-                                          <i class="far fa-eye"></i>
+                                          <i className="far fa-eye"></i>
                                         </a>
                                       </li>
                                       <li>
@@ -329,7 +329,7 @@ export default function Loja({ setAdd, add }) {
                                           data-bs-toggle="modal"
                                           data-bs-target="#add_to_cart_modal"
                                         >
-                                          <i class="fas fa-shopping-cart"></i>
+                                          <i className="fas fa-shopping-cart"></i>
                                         </a>
                                       </li>
                                     </ul>
@@ -347,10 +347,10 @@ export default function Loja({ setAdd, add }) {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <aside class="sidebar ltn__shop-sidebar ltn__right-sidebar">
-                <div class="widget ltn__search-widget">
-                  <h4 class="ltn__widget-title ltn__widget-title-border">
+            <div className="col-lg-4">
+              <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar">
+                <div className="widget ltn__search-widget">
+                  <h4 className="ltn__widget-title ltn__widget-title-border">
                     Procurar
                   </h4>
                   <form action="#">
@@ -360,12 +360,12 @@ export default function Loja({ setAdd, add }) {
                       placeholder="Digite sua procura..."
                     />
                     <button type="submit">
-                      <i class="fas fa-search"></i>
+                      <i className="fas fa-search"></i>
                     </button>
                   </form>
                 </div>
-                <div class="widget ltn__menu-widget">
-                  <h4 class="ltn__widget-title ltn__widget-title-border">
+                <div className="widget ltn__menu-widget">
+                  <h4 className="ltn__widget-title ltn__widget-title-border">
                     Categorias
                   </h4>
                   <ul>
@@ -376,7 +376,7 @@ export default function Loja({ setAdd, add }) {
                             <a key={index} href="#">
                               {ref.nome}
                               <span>
-                                <i class="fas fa-long-arrow-alt-right"></i>
+                                <i className="fas fa-long-arrow-alt-right"></i>
                               </span>
                             </a>
                           </li>
@@ -389,44 +389,44 @@ export default function Loja({ setAdd, add }) {
                 </div>
 
                 {true === false ? (
-                  <div class="widget ltn__top-rated-product-widget">
-                    <h4 class="ltn__widget-title ltn__widget-title-border">
+                  <div className="widget ltn__top-rated-product-widget">
+                    <h4 className="ltn__widget-title ltn__widget-title-border">
                       Produtos mais vendidos
                     </h4>
                     <ul>
                       <li>
-                        <div class="top-rated-product-item clearfix">
-                          <div class="top-rated-product-img">
+                        <div className="top-rated-product-item clearfix">
+                          <div className="top-rated-product-img">
                             <a href="product-details.html">
                               <img src="img/product/1.png" alt="#" />
                             </a>
                           </div>
-                          <div class="top-rated-product-info">
-                            <div class="product-ratting">
+                          <div className="top-rated-product-info">
+                            <div className="product-ratting">
                               <ul>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                               </ul>
@@ -436,7 +436,7 @@ export default function Loja({ setAdd, add }) {
                                 Mixel Solid Seat Cover
                               </a>
                             </h6>
-                            <div class="product-price">
+                            <div className="product-price">
                               <span>$49.00</span>
                               <del>$65.00</del>
                             </div>
@@ -444,38 +444,38 @@ export default function Loja({ setAdd, add }) {
                         </div>
                       </li>
                       <li>
-                        <div class="top-rated-product-item clearfix">
-                          <div class="top-rated-product-img">
+                        <div className="top-rated-product-item clearfix">
+                          <div className="top-rated-product-img">
                             <a href="product-details.html">
                               <img src="img/product/2.png" alt="#" />
                             </a>
                           </div>
-                          <div class="top-rated-product-info">
-                            <div class="product-ratting">
+                          <div className="top-rated-product-info">
+                            <div className="product-ratting">
                               <ul>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                               </ul>
@@ -485,7 +485,7 @@ export default function Loja({ setAdd, add }) {
                                 Brake Conversion Kit
                               </a>
                             </h6>
-                            <div class="product-price">
+                            <div className="product-price">
                               <span>$49.00</span>
                               <del>$65.00</del>
                             </div>
@@ -493,38 +493,38 @@ export default function Loja({ setAdd, add }) {
                         </div>
                       </li>
                       <li>
-                        <div class="top-rated-product-item clearfix">
-                          <div class="top-rated-product-img">
+                        <div className="top-rated-product-item clearfix">
+                          <div className="top-rated-product-img">
                             <a href="product-details.html">
                               <img src="img/product/3.png" alt="#" />
                             </a>
                           </div>
-                          <div class="top-rated-product-info">
-                            <div class="product-ratting">
+                          <div className="top-rated-product-info">
+                            <div className="product-ratting">
                               <ul>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="fas fa-star-half-alt"></i>
+                                    <i className="fas fa-star-half-alt"></i>
                                   </a>
                                 </li>
                                 <li>
                                   <a href="#">
-                                    <i class="far fa-star"></i>
+                                    <i className="far fa-star"></i>
                                   </a>
                                 </li>
                               </ul>
@@ -534,7 +534,7 @@ export default function Loja({ setAdd, add }) {
                                 Coil Spring Conversion
                               </a>
                             </h6>
-                            <div class="product-price">
+                            <div className="product-price">
                               <span>$49.00</span>
                               <del>$65.00</del>
                             </div>

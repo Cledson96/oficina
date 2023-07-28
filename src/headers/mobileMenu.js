@@ -4,11 +4,11 @@ export default function Mobile() {
   return (
     <div
       id="ltn__utilize-mobile-menu"
-      class="ltn__utilize ltn__utilize-mobile-menu"
+      className="ltn__utilize ltn__utilize-mobile-menu"
     >
-      <div class="ltn__utilize-menu-inner ltn__scrollbar">
-        <div class="ltn__utilize-menu-head">
-          <div class="site-logo">
+      <div className="ltn__utilize-menu-inner ltn__scrollbar">
+        <div className="ltn__utilize-menu-head">
+          <div className="site-logo">
             <a href="index.html">
               <img
                 style={{ height: "99px", width: "120px", borderRadius: "10px" }}
@@ -17,18 +17,18 @@ export default function Mobile() {
               />
             </a>
           </div>
-          <button class="ltn__utilize-close">×</button>
+          <button className="ltn__utilize-close">×</button>
         </div>
-        <div class="ltn__utilize-menu-search-form">
+        <div className="ltn__utilize-menu-search-form">
           <form action="#"></form>
         </div>
-        <div class="ltn__utilize-menu">
+        <div className="ltn__utilize-menu">
           <ul>
             <a href="/">INICIO</a>
 
             <li>
               <a href="/sobre">Sobre</a>
-              <ul class="sub-menu">
+              <ul className="sub-menu">
                 <li>
                   <a href="/sobre">Sobre</a>
                 </li>
@@ -47,12 +47,12 @@ export default function Mobile() {
             <a href="contact.html">CONTATO</a>
           </ul>
         </div>
-        <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+        <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
           <ul>
             <li>
               <a href="account.html" title="My Account">
-                <span class="utilize-btn-icon">
-                  <i class="far fa-user"></i>
+                <span className="utilize-btn-icon">
+                  <i className="far fa-user"></i>
                 </span>
                 Minha conta
               </a>
@@ -60,8 +60,8 @@ export default function Mobile() {
 
             <li>
               <a href="cart.html" title="Shoping Cart">
-                <span class="utilize-btn-icon">
-                  <i class="fas fa-shopping-cart"></i>
+                <span className="utilize-btn-icon">
+                  <i className="fas fa-shopping-cart"></i>
                   <sup>0</sup>
                 </span>
                 Carrinho
@@ -69,14 +69,14 @@ export default function Mobile() {
             </li>
           </ul>
         </div>
-        <div class="ltn__social-media-2">
+        <div className="ltn__social-media-2">
           <ul>
             <li>
               <a
                 href="https://www.facebook.com/autopecasbodnar"
                 title="Facebook"
               >
-                <i class="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
             </li>
 
@@ -85,7 +85,7 @@ export default function Mobile() {
                 href="https://www.instagram.com/autopecasbodnar/"
                 title="Instagram"
               >
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
             </li>
           </ul>

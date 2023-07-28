@@ -78,20 +78,20 @@ export default function SignUp() {
       )}
       {signUp_OK ? <SignUpOK></SignUpOK> : <></>}
       <div
-        class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
+        className="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
         data-bs-bg={cadastro}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
-                <div class="section-title-area ltn__section-title-2">
-                  <h6 class="section-subtitle ltn__secondary-color">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                <div className="section-title-area ltn__section-title-2">
+                  <h6 className="section-subtitle ltn__secondary-color">
                     // Bem vindo a autepeças Bodnar
                   </h6>
-                  <h1 class="section-title white-color">Cadastro</h1>
+                  <h1 className="section-title white-color">Cadastro</h1>
                 </div>
-                <div class="ltn__breadcrumb-list">
+                <div className="ltn__breadcrumb-list">
                   <ul>
                     <li>
                       <a href="/">Inicio</a>
@@ -104,12 +104,12 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      <div class="ltn__login-area pb-110">
-        <div class="container">
-          <div style={{ alignItems: "center" }} class="row d-flex">
-            <div class="col-lg-12">
-              <div class="section-title-area text-center">
-                <h1 class="section-title">
+      <div className="ltn__login-area pb-110">
+        <div className="container">
+          <div style={{ alignItems: "center" }} className="row d-flex">
+            <div className="col-lg-12">
+              <div className="section-title-area text-center">
+                <h1 className="section-title">
                   Cadastre <br />
                   sua conta
                 </h1>
@@ -117,13 +117,13 @@ export default function SignUp() {
               </div>
             </div>
           </div>
-          <div style={{ alignItems: "center" }} class="row d-flex">
+          <div style={{ alignItems: "center" }} className="row d-flex">
             <div
               style={{ width: "100%", margin: "0 auto", maxWidth: "710px" }}
-              class="col-lg-6 offset-lg-3"
+              className="col-lg-6 offset-lg-3"
             >
-              <div class="account-login-inner">
-                <form action="#" class="ltn__form-box contact-form-box">
+              <div className="account-login-inner">
+                <form action="#" className="ltn__form-box contact-form-box">
                   <div
                     style={{ justifyContent: "space-between" }}
                     className="row d-flex"
@@ -213,17 +213,17 @@ export default function SignUp() {
                     />
                   </div>
 
-                  <div class="btn-wrapper">
+                  <div className="btn-wrapper">
                     <span
                       onClick={() => sendBody()}
-                      class="theme-btn-1 btn reverse-color btn-block"
+                      className="theme-btn-1 btn reverse-color btn-block"
                     >
                       CRIAR CONTA
                     </span>
                   </div>
                 </form>
-                <div class="by-agree text-center">
-                  <div class="go-to-btn mt-50">
+                <div className="by-agree text-center">
+                  <div className="go-to-btn mt-50">
                     <a href="login">Já possui uma conta? Entre. </a>
                   </div>
                 </div>

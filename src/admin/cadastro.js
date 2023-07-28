@@ -45,7 +45,7 @@ export default function CadastroProduto() {
       <div className="row painel2">
         <div className="col-md-12 ">
           <h2> Cadastrar Produto </h2>
-          <form action="#" class="ltn__form-box contact-form-box">
+          <form action="#" className="ltn__form-box contact-form-box">
             <div className="row">
               <div className="col-md-3 form-group">
                 Nome:

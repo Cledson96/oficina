@@ -13,13 +13,13 @@ export default function Cars({ add, setQtd, setAdd }) {
     );
 
     localStorage.setItem("carrinho", JSON.stringify(carrinhoFiltrado));
-    setAdd(!add); // Atualize o estado para refletir a remoção do item no componente
+    setAdd(!add);
   }
   useEffect(() => {
     const carrinho = localStorage.getItem("carrinho");
     const atualizado = JSON.parse(carrinho);
     setCar(atualizado);
-    console.log(atualizado);
+  
     let soma = 0;
     if (atualizado !== null) {
       for (let i = 0; i < atualizado.length; i++) {
@@ -34,7 +34,7 @@ export default function Cars({ add, setQtd, setAdd }) {
       }
     }
   }, [add]);
-  console.log(car);
+
   return (
     <>
       <div
@@ -48,9 +48,9 @@ export default function Cars({ add, setQtd, setAdd }) {
           </div>
           <div className="mini-cart-product-area ltn__scrollbar">
             {car ? (
-              car.map((ref) => {
+              car.map((ref,index) => {
                 return (
-                  <div className="mini-cart-item clearfix">
+                  <div key={index} className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
                       <a href={`/produto/${ref.id}`}>
                         <img

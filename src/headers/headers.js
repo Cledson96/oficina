@@ -1,7 +1,6 @@
 import "./headers.css";
 import logo from "./../img/logo_fundo_cortado.jpeg";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { checker } from "../request/request";
 import Cars from "../components/cars";
 import Mobile from "./mobileMenu";
@@ -14,21 +13,20 @@ export default function Headers({
   qtd,
   setAdd,
 }) {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
 
   const verification = window.location.pathname.split("/")[1];
 
   useEffect(() => {
     let token = localStorage.getItem("token");
-
-    let verification = checker(token);
-    verification.then((res) => {
-      setname(res.data);
-      setlogged(true);
-    });
-    verification.catch(() =>
-      console.log("Tivemos um problema para obter os dados!!")
-    );
+    if (token !== null) {
+      let verification = checker(token);
+      verification.then((res) => {
+        setName(res.data);
+        setlogged(true);
+      });
+      verification.catch((error) => console.log("Erro:", error));
+    }
   }, []);
 
   return (
@@ -243,6 +241,7 @@ export default function Headers({
                             name="search"
                             value=""
                             placeholder="Localizar..."
+                            onChange={(e) => console.log(e)}
                           />
                           <button type="submit">
                             <span>
