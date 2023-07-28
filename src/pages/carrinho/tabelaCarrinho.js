@@ -29,7 +29,7 @@ export default function Tabela({ car,add,setAdd }) {
     }
 
     localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
-    setAdd(!add); // Atualize o estado para refletir a alteração no componente
+    setAdd(!add); 
   }
 
   function removerItemDoCarrinho(itemId) {
@@ -41,7 +41,7 @@ export default function Tabela({ car,add,setAdd }) {
     );
 
     localStorage.setItem("carrinho", JSON.stringify(carrinhoFiltrado));
-    setAdd(!add); // Atualize o estado para refletir a remoção do item no componente
+    setAdd(!add); 
   }
 
   return (

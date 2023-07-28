@@ -22,8 +22,7 @@ export default function SignIn({ setscreen, setview, view, setlogged }) {
     }
     const post = postSignIn(data);
     post.then((data) => {
-      alert("deu boa");
-      console.log(data);
+ 
       localStorage.setItem("token", data.data.token);
       localStorage.setItem("user", data.data.name);
       setlogged(true);

@@ -10,13 +10,24 @@ export default function Carrinho({ add, setQtd, setAdd }) {
   const [total, setTotal] = useState(0);
   const [frete, setFrete] = useState(0);
   const [status, setStatus] = useState(false);
+
   useEffect(() => {
-    const carrinho = localStorage.getItem("carrinho");
-    const atualizado = JSON.parse(carrinho);
+    const carrinho = localStorage.getItem("carrinho") || [];
+
+    let atualizado;
+    try {
+      atualizado = carrinho.length > 0 ? JSON.parse(carrinho) : [];
+    } catch (error) {
+      atualizado = [];
+    }
+
     setCar(atualizado);
     let soma = 0;
     for (let i = 0; i < atualizado.length; i++) {
-      if (atualizado[i].promocao > 0) {
+      if (
+        Number(atualizado[i].promocao) > 0 &&
+        Number(atualizado[i].promocao) < Number(atualizado[i].preco)
+      ) {
         soma = soma + Number(atualizado[i].promocao) * atualizado[i].quantidade;
       } else {
         soma = soma + Number(atualizado[i].preco) * atualizado[i].quantidade;
@@ -36,7 +47,14 @@ export default function Carrinho({ add, setQtd, setAdd }) {
             <div className="col-lg-12">
               <div className="shoping-cart-inner">
                 <Tabela car={car} add={add} setAdd={setAdd} />
-                <CalcularFrete car={car} setFrete={setFrete} setStatus={setStatus} add={add}/>
+                <CalcularFrete
+                  car={car}
+                  setFrete={setFrete}
+                  setStatus={setStatus}
+                  add={add}
+                  total={total}
+                  frete={frete}
+                />
                 <ValorCompra total={total} frete={frete} status={status} />
               </div>
             </div>

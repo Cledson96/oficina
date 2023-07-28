@@ -2,7 +2,14 @@ import { useState, useEffect } from "react";
 import { valorFrete } from "../../request/request";
 import axios from "axios";
 import "./carrinho.css";
-export default function CalcularFrete({ car, setFrete, setStatus, add }) {
+export default function CalcularFrete({
+  car,
+  setFrete,
+  setStatus,
+  add,
+  frete,
+  total,
+}) {
   const [cep, setCep] = useState("");
   const [logradouro, setLogradouro] = useState("");
   const [numero, setNumero] = useState("");
@@ -14,13 +21,32 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
   const [opcoesFrete, setOpcoesFrete] = useState([]);
 
   useEffect(() => {
+    let compra = localStorage.getItem("compra");
+    try {
+      compra = compra.length > 0 ? JSON.parse(compra) : [];
+    } catch (error) {
+      compra = [];
+    }
+
+    if (compra !== null && compra.endereco) {
+      handleCepChange(compra.endereco.cep);
+      setNumero(compra.endereco.numero);
+      setComplemento(compra.endereco.complemento);
+    }
+  }, []);
+
+  useEffect(() => {
     setStatus(false);
     setOpcoesFrete([]);
     setSelectedOption(null);
   }, [add]);
 
   async function calcularFrete() {
-    if (logradouro.length < 1 || cep.length < 9 || (numero.length < 1 && complemento.length < 1) ) {
+    if (
+      logradouro.length < 1 ||
+      cep.length < 9 ||
+      (numero.length < 1 && complemento.length < 1)
+    ) {
       alert("Obrigatório endereço valido");
       return;
     }
@@ -40,7 +66,7 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
     setStatus(false);
     setOpcoesFrete([]);
     setSelectedOption(null);
-    let value = event.target.value;
+    let value = event;
 
     value = value.replace(/\D/g, "");
 
@@ -76,6 +102,20 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
 
   function handleOptionClick(dados) {
     setSelectedOption(dados.id === selectedOption ? null : dados.id);
+    let compra = dados;
+    compra.endereco = {
+      logradouro,
+      numero: numero || "",
+      complemento: complemento || "",
+      bairro,
+      cidade,
+      estado,
+      cep: cep.replace("-", ""),
+    };
+    compra.produtos = car;
+    compra.valorProdutos = total;
+
+    localStorage.setItem("compra", JSON.stringify(compra));
     setFrete(dados.price || 0);
     setStatus(true);
   }
@@ -104,7 +144,7 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
                 name="cep"
                 maxLength="9"
                 value={cep}
-                onChange={handleCepChange}
+                onChange={(e) => handleCepChange(e.target.value)}
               />
               <div style={{ display: "flex" }}>
                 <input
@@ -196,9 +236,12 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
                         <>
                           <li
                             className={
-                              selectedOption === referencia.id
-                                ? "selecionado_frete"
-                                : ""
+                              (selectedOption === referencia.id
+                                ? "selecionado_frete "
+                                : "") +
+                              (referencia.company.name === "Correios"
+                                ? "arruma-correio"
+                                : "")
                             }
                             key={index}
                           >
@@ -208,7 +251,11 @@ export default function CalcularFrete({ car, setFrete, setStatus, add }) {
                               className="custom-checkbox"
                               checked={selectedOption === referencia.id}
                               onChange={() => handleOptionClick(referencia)}
-                            />{" "}
+                            />
+                            <img
+                              alt={referencia.company.name}
+                              src={referencia.company.picture}
+                            />
                             {referencia.company.name} ({referencia.name}) -
                             Valor:{" "}
                             <h1> R$ {referencia.price.replace(".", ",")}</h1> -
