@@ -7,7 +7,6 @@ export default function CalcularFrete({
   setFrete,
   setStatus,
   add,
-  frete,
   total,
 }) {
   const [cep, setCep] = useState("");
@@ -124,19 +123,10 @@ export default function CalcularFrete({
     <>
       <div className="row">
         <div>
-          <h1
-            style={{
-              fontSize: "25px",
-              fontWeight: "700",
-              marginBottom: "30px",
-            }}
-          >
-            Endereço de entrega:
-          </h1>
-          <div className="col-md-10">
-            <div className="shop-shipping">
+          <h1 className="titulo-carrinho-endereco">Endereço de entrega:</h1>
+          <div className="col-md-12">
+            <div className="shop-shipping input-carrinho">
               <input
-                style={{ textAlign: "center", fontSize: "30px" }}
                 className="input-form"
                 type="text"
                 placeholder="CEP"
@@ -146,18 +136,16 @@ export default function CalcularFrete({
                 value={cep}
                 onChange={(e) => handleCepChange(e.target.value)}
               />
-              <div style={{ display: "flex" }}>
+              <div>
                 <input
                   className="input-form"
                   type="text"
                   placeholder="LOGRADOURO"
                   value={logradouro}
-                  style={{ marginRight: "15px" }}
                   readOnly
                 />
 
                 <input
-                  style={{ width: "20%" }}
                   className="input-form"
                   type="text"
                   placeholder="NUMERO"
@@ -166,17 +154,15 @@ export default function CalcularFrete({
                 />
               </div>
 
-              <div style={{ display: "flex" }}>
+              <div>
                 <input
                   className="input-form"
                   type="text"
                   placeholder="BAIRRO"
                   value={bairro}
-                  style={{ marginRight: "15px" }}
                   readOnly
                 />
                 <input
-                  style={{ width: "30%" }}
                   className="input-form"
                   type="text"
                   placeholder="COMPLEMENTO"
@@ -184,9 +170,8 @@ export default function CalcularFrete({
                   value={complemento}
                 />
               </div>
-              <div style={{ display: "flex" }}>
+              <div>
                 <input
-                  style={{ marginRight: "15px" }}
                   className="input-form"
                   type="text"
                   placeholder="CIDADE"
@@ -195,7 +180,6 @@ export default function CalcularFrete({
                 />
 
                 <input
-                  style={{ width: "30%" }}
                   className="input-form"
                   type="text"
                   placeholder="ESTADO"

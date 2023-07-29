@@ -12,11 +12,17 @@ import Loja from "./pages/loja/loja";
 import Produto from "./pages/loja/produto";
 import CadastroProduto from "./admin/cadastro";
 import Carrinho from "./pages/carrinho/carrinho";
+import Checkout from "./pages/checkout/checkout";
+import "./App.css";
 
 export default function App() {
   const [logged, setlogged] = useState(false);
   const [add, setAdd] = useState(false);
   const [qtd, setQtd] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [car, setCar] = useState([]);
+  const [cliente, setCliente] = useState();
+
   return (
     <>
       <BrowserRouter>
@@ -27,12 +33,27 @@ export default function App() {
           setQtd={setQtd}
           qtd={qtd}
           setAdd={setAdd}
+          total={total}
+          setTotal={setTotal}
+          car={car}
+          setCar={setCar}
+          setCliente={setCliente}
         />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
             path="/carrinho"
-            element={<Carrinho add={add} setQtd={setQtd} setAdd={setAdd} />}
+            element={
+              <Carrinho
+                add={add}
+                setQtd={setQtd}
+                setAdd={setAdd}
+                total={total}
+                setTotal={setTotal}
+                car={car}
+                setCar={setCar}
+              />
+            }
           />
           <Route path="/login" element={<SignIn setlogged={setlogged} />} />
           <Route path="/cadastro" element={<SignUp setlogged={setlogged} />} />
@@ -45,6 +66,7 @@ export default function App() {
             element={<Produto setAdd={setAdd} add={add} />}
           />
           <Route path="/admin/cad_produto" element={<CadastroProduto />} />
+          <Route path="/checkout" element={<Checkout car={car} cliente={cliente} logged={logged} />} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

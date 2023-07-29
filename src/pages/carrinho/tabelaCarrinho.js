@@ -1,49 +1,12 @@
 import { BASE_URL } from "../../request/request";
+import {
+  diminuirCarrinho,
+  aumentarCarrinho,
+  removerItemDoCarrinho,
+} from "../../components/configCarrinho";
+import "./carrinho.css";
 
-export default function Tabela({ car,add,setAdd }) {
-    
-  function diminuirCarrinho(itemId) {
-    const carrinho = localStorage.getItem("carrinho") || "[]";
-    const carrinhoAtualizado = JSON.parse(carrinho);
-
-    const itemExistente = carrinhoAtualizado.find(
-      (item) => item.id === itemId.id
-    );
-    if (itemExistente && itemExistente.quantidade > 1) {
-      itemExistente.quantidade = itemExistente.quantidade - 1;
-    }
-
-    localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
-    setAdd(!add);
-  }
-
-  function aumentarCarrinho(itemId) {
-    const carrinho = localStorage.getItem("carrinho") || "[]";
-    const carrinhoAtualizado = JSON.parse(carrinho);
-
-    const itemExistente = carrinhoAtualizado.find(
-      (item) => item.id === itemId.id
-    );
-    if (itemExistente && itemExistente.quantidade < itemExistente.qtd) {
-      itemExistente.quantidade = itemExistente.quantidade + 1;
-    }
-
-    localStorage.setItem("carrinho", JSON.stringify(carrinhoAtualizado));
-    setAdd(!add); 
-  }
-
-  function removerItemDoCarrinho(itemId) {
-    const carrinho = localStorage.getItem("carrinho") || "[]";
-    const carrinhoAtualizado = JSON.parse(carrinho);
-
-    const carrinhoFiltrado = carrinhoAtualizado.filter(
-      (item) => item.id !== itemId
-    );
-
-    localStorage.setItem("carrinho", JSON.stringify(carrinhoFiltrado));
-    setAdd(!add); 
-  }
-
+export default function Tabela({ car, add, setAdd }) {
   return (
     <>
       <div className="shoping-cart-table table-responsive">
@@ -53,7 +16,7 @@ export default function Tabela({ car,add,setAdd }) {
               return (
                 <tr key={index}>
                   <td
-                    onClick={() => removerItemDoCarrinho(ref.id)}
+                    onClick={() => removerItemDoCarrinho(ref.id, add, setAdd)}
                     className="cart-product-remove"
                   >
                     x
@@ -88,7 +51,7 @@ export default function Tabela({ car,add,setAdd }) {
                       className="cart-plus-minus  d-flex"
                     >
                       <i
-                        onClick={() => diminuirCarrinho(ref)}
+                        onClick={() => diminuirCarrinho(ref, add, setAdd)}
                         style={{ color: "red" }}
                         className="fa fa-minus"
                       ></i>
@@ -100,7 +63,7 @@ export default function Tabela({ car,add,setAdd }) {
                         readOnly
                       />
                       <i
-                        onClick={() => aumentarCarrinho(ref)}
+                        onClick={() => aumentarCarrinho(ref, add, setAdd)}
                         style={{ color: "red" }}
                         className="fa fa-plus"
                       ></i>

@@ -1,41 +1,16 @@
 import "./carrinho.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Topo from "./topo";
 import Tabela from "./tabelaCarrinho";
 import CalcularFrete from "./calculoFrete";
 import ValorCompra from "./valorCompra";
+import { useCarrinhoTotal  } from "../../components/configCarrinho";
 
-export default function Carrinho({ add, setQtd, setAdd }) {
-  const [car, setCar] = useState([]);
-  const [total, setTotal] = useState(0);
+export default function Carrinho({ add, setQtd, setAdd ,total,setTotal,car,setCar}) {
   const [frete, setFrete] = useState(0);
   const [status, setStatus] = useState(false);
 
-  useEffect(() => {
-    const carrinho = localStorage.getItem("carrinho") || [];
-
-    let atualizado;
-    try {
-      atualizado = carrinho.length > 0 ? JSON.parse(carrinho) : [];
-    } catch (error) {
-      atualizado = [];
-    }
-
-    setCar(atualizado);
-    let soma = 0;
-    for (let i = 0; i < atualizado.length; i++) {
-      if (
-        Number(atualizado[i].promocao) > 0 &&
-        Number(atualizado[i].promocao) < Number(atualizado[i].preco)
-      ) {
-        soma = soma + Number(atualizado[i].promocao) * atualizado[i].quantidade;
-      } else {
-        soma = soma + Number(atualizado[i].preco) * atualizado[i].quantidade;
-      }
-      setTotal(soma);
-      setQtd(atualizado.length);
-    }
-  }, [add]);
+  useCarrinhoTotal(setCar, add, setTotal, setQtd);
 
   return (
     <>

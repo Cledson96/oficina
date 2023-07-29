@@ -42,6 +42,11 @@ export function get_produto(id) {
   return promise;
 }
 
+export function get_cliente(id) {
+  const promise = axios.get(`${BASE_URL}/cliente/${id}`);
+  return promise;
+}
+
 export function get_categorias() {
   const promise = axios.get(`${BASE_URL}/categoria`);
   return promise;

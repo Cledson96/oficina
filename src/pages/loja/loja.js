@@ -12,7 +12,6 @@ export default function Loja({ setAdd, add }) {
   useEffect(() => {
     const product = get_produtos();
     product.then((res) => {
-      console.log(res.data);
       setData(res.data);
       setTotalItens(res.data.length);
     });
@@ -165,7 +164,10 @@ export default function Loja({ setAdd, add }) {
                 </ul>
               </div>
               <div className="tab-content">
-                <div className="tab-pane fade active show" id="liton_product_grid">
+                <div
+                  className="tab-pane fade active show"
+                  id="liton_product_grid"
+                >
                   <div className="ltn__product-tab-content-inner ltn__product-grid-view">
                     <div className="row">
                       {data ? (

@@ -5,7 +5,7 @@ export default function Sobre() {
   return (
     <>
       <div
-        className="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image"
+        className="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image ajuste-tamanho-carrinho"
         data-bs-bg={sobre}
       >
         <div className="container">
@@ -19,7 +19,7 @@ export default function Sobre() {
                   <h1 className="section-title white-color">Sobre nós...</h1>
                 </div>
                 <div className="ltn__breadcrumb-list">
-                  <ul>
+                  <ul className="atalho">
                     <li>
                       <a href="/">Inicio</a>
                     </li>

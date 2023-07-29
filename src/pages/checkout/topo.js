@@ -1,5 +1,6 @@
-import capa from "../../img/wallpaper.jpg";
-import "./carrinho.css";
+import "./checkout.css";
+import capa from "../../img/checkout.jpg";
+
 export default function Topo() {
   return (
     <>
@@ -12,14 +13,15 @@ export default function Topo() {
             <div className="col-lg-12">
               <div className="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
                 <div className="section-title-area ltn__section-title-2">
-                  <h1 className="section-title white-color">Carrinho</h1>
+                
+                  <h1 className="section-title white-color">Checkout</h1>
                 </div>
                 <div className="ltn__breadcrumb-list">
-                  <ul>
+                  <ul className="atalho"> 
                     <li>
                       <a href="/">Inicio</a>
                     </li>
-                    <li>Carrinho</li>
+                    <li>Checkout</li> 
                   </ul>
                 </div>
               </div>

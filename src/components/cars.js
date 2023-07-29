@@ -1,39 +1,16 @@
-import { useEffect, useState } from "react";
 import { BASE_URL } from "../request/request";
-export default function Cars({ add, setQtd, setAdd }) {
-  const [car, setCar] = useState([]);
-  const [total, setTotal] = useState(0);
+import { removerItemDoCarrinho, useCarrinhoTotal } from "./configCarrinho";
 
-  function removerItemDoCarrinho(itemId) {
-    const carrinho = localStorage.getItem("carrinho") || "[]";
-    const carrinhoAtualizado = JSON.parse(carrinho);
-
-    const carrinhoFiltrado = carrinhoAtualizado.filter(
-      (item) => item.id !== itemId
-    );
-
-    localStorage.setItem("carrinho", JSON.stringify(carrinhoFiltrado));
-    setAdd(!add);
-  }
-  useEffect(() => {
-    const carrinho = localStorage.getItem("carrinho");
-    const atualizado = JSON.parse(carrinho);
-    setCar(atualizado);
-  
-    let soma = 0;
-    if (atualizado !== null) {
-      for (let i = 0; i < atualizado.length; i++) {
-        if (atualizado[i].promocao > 0) {
-          soma =
-            soma + Number(atualizado[i].promocao) * atualizado[i].quantidade;
-        } else {
-          soma = soma + Number(atualizado[i].preco) * atualizado[i].quantidade;
-        }
-        setTotal(soma);
-        setQtd(atualizado.length);
-      }
-    }
-  }, [add]);
+export default function Cars({
+  add,
+  setQtd,
+  setAdd,
+  total,
+  setTotal,
+  car,
+  setCar,
+}) {
+  useCarrinhoTotal(setCar, add, setTotal, setQtd);
 
   return (
     <>
@@ -48,7 +25,7 @@ export default function Cars({ add, setQtd, setAdd }) {
           </div>
           <div className="mini-cart-product-area ltn__scrollbar">
             {car ? (
-              car.map((ref,index) => {
+              car.map((ref, index) => {
                 return (
                   <div key={index} className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
@@ -60,7 +37,9 @@ export default function Cars({ add, setQtd, setAdd }) {
                         />
                       </a>
                       <span
-                        onClick={() => removerItemDoCarrinho(ref.id)}
+                        onClick={() =>
+                          removerItemDoCarrinho(ref.id, add, setAdd)
+                        }
                         className="mini-cart-item-delete"
                       >
                         <i className="icon-cancel"></i>
@@ -94,7 +73,7 @@ export default function Cars({ add, setQtd, setAdd }) {
               <a href="/carrinho" className="theme-btn-1 btn btn-effect-1">
                 Ver carrinho
               </a>
-              <a href="/carrinho" className="theme-btn-2 btn btn-effect-2">
+              <a href="/checkout" className="theme-btn-2 btn btn-effect-2">
                 Comprar
               </a>
             </div>

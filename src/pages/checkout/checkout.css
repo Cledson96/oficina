@@ -1,0 +1,69 @@
+.ajuste-quantidade {
+    max-width: 50px !important;
+}
+
+.ajuste-quantidade div {
+    max-width: 40px !important;
+    border: none !important;
+}
+
+.ajuste-tabela-checkout td {
+    padding: 10px !important;
+}
+
+.ajuste-imagem-checkout {
+    width: 116px !important;
+}
+
+.ajuste-preco-checkout {
+    width: 100px;
+}
+
+.logar {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 250px;
+    font-weight: 500;
+}
+
+.logar a {
+    color: red;
+    text-decoration: underline;
+}
+
+.logar a:hover {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.checkout-show {
+    padding: 5px 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cliente-dados-checkout input {
+    font-size: 20px !important;
+    height: 40px !important;
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.icon-ajuste::before {
+    top: 30% !important;
+}
+
+.cliente-dados-checkout {
+    padding: 30px 30px 10px !important;
+}
+
+.checkout-show:hover {
+    cursor: pointer;
+    border-color: rgb(27, 247, 27);
+    border-style: solid;
+    border-width: 1px;
+}

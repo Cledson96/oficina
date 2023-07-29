@@ -6,8 +6,18 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-
+.atalho a{
+  color: white;
+}
+.atalho li{
+  font-size: 22px;
+  font-weight: 1000 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.918);
+  color: rgb(255, 208, 0) !important;
+}
+.section-title.white-color {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.918) !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -37,5 +47,12 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+@media (min-width: 768px) {
+  .ajuste-tamanho-carrinho {
+    margin-bottom: 30px !important;
+    padding-bottom: 20px !important;
+    padding-top: 180px !important;
   }
 }
