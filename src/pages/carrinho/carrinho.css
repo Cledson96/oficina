@@ -65,7 +65,7 @@
 .shoping-cart-total h4 {
   font-size: 22px !important;
   font-weight: bold;
-  font: inherit !important;
+  font: inherit;
   font-family: 'Montserrat', sans-serif !important;
 }
 

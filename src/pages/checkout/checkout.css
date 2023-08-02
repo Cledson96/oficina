@@ -67,3 +67,79 @@
     border-style: solid;
     border-width: 1px;
 }
+
+.endereco-checkout {
+    padding: 10px !important;
+}
+
+.input-checkout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-checkout input {
+    font-size: 20px;
+    display: flex;
+    height: 40px;
+    text-align: center;
+    width: auto;
+    max-width: min-content;
+    margin: 10px;
+}
+
+.edita-icon {
+    display: flex;
+    margin-left: auto;
+}
+
+.edita-icon:hover {
+    cursor: pointer;
+}
+
+.total-checkout {
+    color: green;
+    font-weight: 600;
+}
+
+.total-checkout-tr {
+    border-top: 1px solid rgb(189, 178, 178);
+    min-width: max-content;
+}
+
+.titulo-total-checkout {
+    font-weight: 600 !important;
+    margin-bottom: 15px;
+}
+
+.pagamento-botao {
+    margin-top: 15px !important;
+    border-radius: 10px;
+    padding: 10px !important;
+}
+
+.ajuste-centralizar {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    padding: 10px 20px !important;
+}
+
+#form-checkout {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.container1 {
+    height: 18px;
+    display: inline-block;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 2px;
+    padding: 1px 2px;
+}

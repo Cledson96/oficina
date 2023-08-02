@@ -220,12 +220,9 @@ export default function CalcularFrete({
                         <>
                           <li
                             className={
-                              (selectedOption === referencia.id
+                              selectedOption === referencia.id
                                 ? "selecionado_frete "
-                                : "") +
-                              (referencia.company.name === "Correios"
-                                ? "arruma-correio"
-                                : "")
+                                : ""
                             }
                             key={index}
                           >

@@ -1,10 +1,21 @@
 import "./carrinho.css";
+import { useNavigate } from "react-router-dom";
+
 export default function ValorCompra({ frete, total, status }) {
+  const navigate = useNavigate();
   return (
     <>
       <div className="row">
         <div className="shoping-cart-total mt-20">
-          <span style={{fontWeight:"bold",marginBottom:"10px",marginLeft:"7px"}}>Valor total</span>
+          <span
+            style={{
+              fontWeight: "bold",
+              marginBottom: "10px",
+              marginLeft: "7px",
+            }}
+          >
+            Valor total
+          </span>
           <table className="table">
             <tbody>
               <tr>
@@ -28,11 +39,13 @@ export default function ValorCompra({ frete, total, status }) {
               </tr>
             </tbody>
           </table>
-          <div style={{marginTop:"20px"}} className="btn-wrapper text-right">
+          <div style={{ marginTop: "20px" }} className="btn-wrapper text-right">
             <button
               onClick={() => {
                 if (status === false) {
                   alert("Obrigatório calcular o frete corretamente");
+                } else if (status === true) {
+                  navigate("/checkout");
                 }
               }}
               className="theme-btn-1 btn btn-effect-1"

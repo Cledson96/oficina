@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { get_cliente } from "../../request/request";
 import "./checkout.css";
 
-export default function Cliente({ cliente }) {
+export default function Cliente({ cliente, setComprador }) {
   const [on, setOn] = useState(false);
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -22,7 +22,19 @@ export default function Cliente({ cliente }) {
       setCpf(response.data.cpf || "");
     });
     dados.catch(() => console.log("Tivemos um problema para obter os dados!!"));
-  }, [cliente]);
+  }, []);
+
+  useEffect(() => {
+    const dados = {
+      id:cliente,
+      nome,
+      email,
+      telefone,
+      contato,
+      cpf
+    };
+    setComprador(dados);
+  }, [nome, email, telefone, contato, cpf]);
 
   return (
     <>

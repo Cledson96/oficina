@@ -2,10 +2,24 @@ import Topo from "./topo";
 import "./checkout.css";
 import Produtos from "./produtos";
 import Cliente from "./cliente";
-import Pagamento from "./pagamento";
 import Total from "./total";
+import Endereco from "./endereco";
+import { useState, useEffect } from "react";
 
 export default function Checkout({ car, cliente, logged }) {
+  const [compra, setCompra] = useState({});
+  const [comprador, setComprador] = useState({});
+
+  useEffect(() => {
+    let verifica = localStorage.getItem("compra");
+    try {
+      verifica = verifica.length > 0 ? JSON.parse(verifica) : [];
+    } catch (error) {
+      verifica = [];
+    }
+    setCompra(verifica);
+  }, [car]);
+
   return (
     <>
       <Topo />
@@ -15,9 +29,9 @@ export default function Checkout({ car, cliente, logged }) {
             <div class="container">
               <div class="row">
                 <Produtos car={car} />
-                <Cliente cliente={cliente} />
-                <Pagamento />
-                <Total />
+                <Cliente cliente={cliente} setComprador={setComprador} />
+                <Endereco compra={compra} />
+                <Total compra={compra} comprador={comprador} />
               </div>
             </div>
           </div>

@@ -14,6 +14,7 @@ import CadastroProduto from "./admin/cadastro";
 import Carrinho from "./pages/carrinho/carrinho";
 import Checkout from "./pages/checkout/checkout";
 import "./App.css";
+import Concluido from "./pages/concluido/concluido";
 
 export default function App() {
   const [logged, setlogged] = useState(false);
@@ -66,7 +67,14 @@ export default function App() {
             element={<Produto setAdd={setAdd} add={add} />}
           />
           <Route path="/admin/cad_produto" element={<CadastroProduto />} />
-          <Route path="/checkout" element={<Checkout car={car} cliente={cliente} logged={logged} />} />
+          <Route
+            path="/checkout"
+            element={<Checkout car={car} cliente={cliente} logged={logged} />}
+          />
+          <Route
+            path="/concluido"
+            element={<Concluido car={car} cliente={cliente} logged={logged} />}
+          />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
